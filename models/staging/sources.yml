@@ -1,0 +1,200 @@
+version: 2
+
+sources:
+
+  - name: shopify
+    description: "Shopify orders, customers, products, inventory — primary commerce source"
+    schema: raw_shopify
+    tables:
+      - name: orders
+        description: "Order headers — one row per order"
+        columns:
+          - name: id
+            tests: [unique, not_null]
+          - name: created_at
+          - name: customer_id
+          - name: financial_status   # paid, refunded, partially_refunded
+          - name: fulfillment_status # fulfilled, partial, unfulfilled
+          - name: total_price
+          - name: subtotal_price
+          - name: total_discounts
+          - name: discount_codes     # JSON array
+          - name: tags               # editorial collection tags (e.g. "ann-loves-lately")
+          - name: source_name        # web, pos, draft_orders
+          - name: location_id        # null = ecommerce; populated = store POS
+
+      - name: order_line_items
+        columns:
+          - name: id
+            tests: [unique, not_null]
+          - name: order_id
+            tests: [not_null]
+          - name: product_id
+          - name: variant_id
+          - name: sku
+          - name: title
+          - name: quantity
+          - name: price
+          - name: total_discount
+          - name: fulfillment_status
+
+      - name: customers
+        columns:
+          - name: id
+            tests: [unique, not_null]
+          - name: email
+          - name: first_name
+          - name: last_name
+          - name: created_at
+          - name: orders_count
+          - name: total_spent
+          - name: tags               # loyalty tier, VIP, etc.
+          - name: accepts_marketing
+
+      - name: products
+        columns:
+          - name: id
+            tests: [unique, not_null]
+          - name: title
+          - name: product_type       # Clothing, Accessories, etc.
+          - name: vendor             # Thomas Mason, Loro Piana, etc.
+          - name: tags               # collection, season, gender
+          - name: status             # active, archived, draft
+          - name: created_at
+
+      - name: product_variants
+        columns:
+          - name: id
+            tests: [unique, not_null]
+          - name: product_id
+          - name: sku
+          - name: price
+          - name: compare_at_price
+          - name: inventory_quantity
+          - name: option1            # size
+          - name: option2            # color/fabric
+
+      - name: inventory_levels
+        columns:
+          - name: inventory_item_id
+          - name: location_id
+          - name: available
+
+      - name: locations
+        columns:
+          - name: id
+            tests: [unique, not_null]
+          - name: name               # "Atlanta Flagship", "Dallas", "eCommerce", etc.
+          - name: city
+          - name: province
+          - name: country
+
+  - name: shiphero
+    description: "ShipHero WMS — fulfillment, shipments, inventory movements, returns"
+    schema: raw_shiphero
+    tables:
+      - name: shipments
+        columns:
+          - name: id
+            tests: [unique, not_null]
+          - name: order_id           # joins to shopify.orders
+          - name: shipped_at
+          - name: carrier
+          - name: tracking_number
+          - name: shipping_cost
+          - name: destination_state
+          - name: destination_zip
+
+      - name: inventory_movements
+        columns:
+          - name: id
+            tests: [unique, not_null]
+          - name: sku
+          - name: warehouse_id
+          - name: movement_type      # receipt, pick, adjustment, return
+          - name: quantity
+          - name: created_at
+
+      - name: returns
+        columns:
+          - name: id
+            tests: [unique, not_null]
+          - name: order_id
+          - name: return_reason
+          - name: restocked
+          - name: created_at
+
+  - name: swym
+    description: "Swym — wishlist and back-in-stock waitlist events"
+    schema: raw_swym
+    tables:
+      - name: wishlist_events
+        description: "Add/remove events on customer wishlists"
+        columns:
+          - name: id
+            tests: [unique, not_null]
+          - name: customer_email
+          - name: product_id
+          - name: variant_id
+          - name: event_type         # add, remove, purchase
+          - name: created_at
+
+      - name: waitlist_signups
+        description: "Back-in-stock notification signups by variant"
+        columns:
+          - name: id
+            tests: [unique, not_null]
+          - name: customer_email
+          - name: variant_id
+          - name: sku
+          - name: signed_up_at
+          - name: notified_at
+          - name: purchased_at       # null if not converted
+
+  - name: loop_returns
+    description: "Loop Returns — self-serve returns portal data"
+    schema: raw_loop
+    tables:
+      - name: return_requests
+        columns:
+          - name: id
+            tests: [unique, not_null]
+          - name: shopify_order_id
+          - name: customer_email
+          - name: status             # pending, approved, received, refunded, exchanged
+          - name: resolution_type    # refund, store_credit, exchange
+          - name: created_at
+          - name: resolved_at
+
+      - name: return_line_items
+        columns:
+          - name: id
+            tests: [unique, not_null]
+          - name: return_request_id
+          - name: shopify_line_item_id
+          - name: sku
+          - name: return_reason      # size, style, quality, changed_mind
+          - name: quantity
+
+  - name: klaviyo
+    description: "Klaviyo — email/SMS marketing events"
+    schema: raw_klaviyo
+    tables:
+      - name: email_events
+        columns:
+          - name: id
+            tests: [unique, not_null]
+          - name: customer_email
+          - name: campaign_id
+          - name: flow_id
+          - name: event_type         # sent, opened, clicked, bounced, unsubscribed
+          - name: created_at
+
+      - name: campaigns
+        columns:
+          - name: id
+            tests: [unique, not_null]
+          - name: name
+          - name: subject
+          - name: sent_at
+          - name: list_id

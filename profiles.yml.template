@@ -1,0 +1,22 @@
+# Copy this to ~/.dbt/profiles.yml and fill in your BigQuery project ID
+# BigQuery free tier: 10GB storage + 1TB queries/month
+
+mashburn_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth                  # run 'gcloud auth application-default login'
+      project: YOUR_GCP_PROJECT_ID   # e.g. mashburn-analytics-dev
+      dataset: dbt_dev
+      location: US
+      threads: 4
+      timeout_seconds: 300
+    prod:
+      type: bigquery
+      method: oauth
+      project: YOUR_GCP_PROJECT_ID
+      dataset: dbt_prod
+      location: US
+      threads: 4
+      timeout_seconds: 300
