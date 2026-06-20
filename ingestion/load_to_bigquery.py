@@ -33,6 +33,7 @@ ENVELOPE_MAP = {
     "shopify/locations": "locations",
     "shopify/products": "products",
     "shopify/customers": "customers",
+    "shopify/product_variants": "product_variants",
     "shopify/inventory_levels": "inventory_levels",
     "shiphero/shipments": "shipments",
     "swym/wishlist_events": "events",

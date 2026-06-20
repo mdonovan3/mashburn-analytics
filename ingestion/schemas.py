@@ -146,6 +146,7 @@ SWYM_WISHLIST_EVENTS = [
     SchemaField("bt", "STRING"),         # brand/source
     SchemaField("cts", "INTEGER"),       # created timestamp millis
     SchemaField("uts", "INTEGER"),       # updated timestamp millis
+    SchemaField("_t", "STRING"),         # action type (e.g. "a" = add)
 ]
 
 SWYM_WAITLIST_SIGNUPS = [
