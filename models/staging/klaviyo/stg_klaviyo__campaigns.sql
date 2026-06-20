@@ -1,4 +1,12 @@
 {{ config(materialized='view') }}
 
--- TODO: Implement — sent_at → TIMESTAMP; open_rate/click_rate already FLOAT
-SELECT * FROM {{ source('klaviyo', 'campaigns') }}
+SELECT
+    CAST(id AS STRING)   AS campaign_id,
+    name,
+    subject,
+    status,
+    list_id,
+    open_rate,
+    click_rate,
+    CAST(sent_at AS TIMESTAMP) AS sent_at
+FROM {{ source('klaviyo', 'campaigns') }}

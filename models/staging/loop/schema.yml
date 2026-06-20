@@ -13,11 +13,11 @@ models:
       - name: state
         tests:
           - accepted_values:
-              values: ['pending', 'approved', 'received', 'complete', 'cancelled']
+              values: ['pending', 'approved', 'received', 'complete', 'cancelled', 'closed']
       - name: return_type
         tests:
           - accepted_values:
-              values: ['exchange', 'refund', 'credit', 'upsell', 'exchange+refund', 'exchange+credit']
+              values: ['exchange', 'refund', 'credit', 'upsell', 'exchange+refund', 'exchange+credit', 'return']
 
   - name: stg_loop__return_line_items
     description: "Loop return line items"

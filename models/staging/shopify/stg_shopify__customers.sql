@@ -1,13 +1,19 @@
 {{ config(materialized='view') }}
 
--- TODO: Implement this model
--- Source: raw_shopify.customers
--- Key transforms:
---   - id → customer_id (STRING)
---   - total_spent → NUMERIC
---   - created_at, updated_at → TIMESTAMP
---   - default_address is a RECORD — flatten city/province/country/zip or keep nested
---   - tags stays as comma-separated string (split in marts if needed)
---   - accepts_marketing is BOOLEAN, no cast needed
-
-SELECT * FROM {{ source('shopify', 'customers') }}
+SELECT
+    CAST(id AS STRING)            AS customer_id,
+    email,
+    first_name,
+    last_name,
+    phone,
+    orders_count,
+    CAST(total_spent AS NUMERIC)  AS total_spent,
+    tags,
+    accepts_marketing,
+    default_address.city          AS city,
+    default_address.province      AS state,
+    default_address.country       AS country,
+    default_address.zip           AS zip,
+    CAST(created_at AS TIMESTAMP) AS created_at,
+    CAST(updated_at AS TIMESTAMP) AS updated_at
+FROM {{ source('shopify', 'customers') }}

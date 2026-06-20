@@ -1,8 +1,18 @@
 {{ config(materialized='view') }}
 
--- TODO: Implement — rename Swym abbreviated fields
--- empi → product_id, epi → variant_id, dt → product_title, du → product_url
--- iu → image_url, pr → price, lid → list_id, di → device_id, bt → source_domain
--- TIMESTAMP_MILLIS(cts) → created_at,  TIMESTAMP_MILLIS(uts) → updated_at
--- _t → wishlist_action ('a'=add, 'r'=remove)
-SELECT * FROM {{ source('swym', 'wishlist_events') }}
+SELECT
+    _pkey                                AS event_id,
+    CAST(empi AS STRING)                 AS product_id,
+    CAST(epi AS STRING)                  AS variant_id,
+    dt                                   AS product_title,
+    du                                   AS product_url,
+    iu                                   AS image_url,
+    CAST(pr AS NUMERIC)                  AS price,
+    sku,
+    lid                                  AS list_id,
+    di                                   AS device_id,
+    bt                                   AS source_domain,
+    _t                                   AS wishlist_action,
+    TIMESTAMP_MILLIS(cts)                AS created_at,
+    TIMESTAMP_MILLIS(uts)                AS updated_at
+FROM {{ source('swym', 'wishlist_events') }}
