@@ -1,18 +1,10 @@
 {{ config(materialized='view') }}
 
-SELECT
-    _pkey                                AS event_id,
-    CAST(empi AS STRING)                 AS product_id,
-    CAST(epi AS STRING)                  AS variant_id,
-    dt                                   AS product_title,
-    du                                   AS product_url,
-    iu                                   AS image_url,
-    CAST(pr AS NUMERIC)                  AS price,
-    sku,
-    lid                                  AS list_id,
-    di                                   AS device_id,
-    bt                                   AS source_domain,
-    _t                                   AS wishlist_action,
-    TIMESTAMP_MILLIS(cts)                AS created_at,
-    TIMESTAMP_MILLIS(uts)                AS updated_at
-FROM {{ source('swym', 'wishlist_events') }}
+-- TODO: Rename and cast from raw_swym.wishlist_events
+--   _pkey → event_id, empi → product_id (STRING), epi → variant_id (STRING)
+--   dt → product_title, du → product_url, iu → image_url
+--   pr → price (NUMERIC), sku, lid → list_id, di → device_id
+--   bt → source_domain, _t → wishlist_action
+--   cts → created_at (TIMESTAMP_MILLIS), uts → updated_at (TIMESTAMP_MILLIS)
+
+SELECT 1 AS stub

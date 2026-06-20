@@ -1,16 +1,10 @@
 {{ config(materialized='view') }}
 
-SELECT
-    CAST(lbl.id AS STRING)              AS label_id,
-    CAST(s.id AS STRING)                AS shipment_id,
-    CAST(s.order_id AS STRING)          AS order_id,
-    lbl.carrier,
-    lbl.shipping_name,
-    lbl.shipping_method,
-    lbl.tracking_number,
-    lbl.tracking_url,
-    lbl.cost                            AS shipping_cost_raw,
-    lbl.status                          AS label_status,
-    CAST(lbl.created_date AS TIMESTAMP) AS created_at
-FROM {{ source('shiphero', 'shipments') }} s,
-UNNEST(s.shipping_labels) AS lbl
+-- TODO: UNNEST shipping_labels array from raw_shiphero.shipments
+--   FROM shipments s, UNNEST(s.shipping_labels) AS lbl
+--   lbl.id → label_id (STRING), s.id → shipment_id (STRING), s.order_id → order_id (STRING)
+--   lbl.carrier, shipping_name, shipping_method, tracking_number, tracking_url
+--   lbl.cost → shipping_cost_raw, lbl.status → label_status
+--   lbl.created_date → created_at (TIMESTAMP)
+
+SELECT 1 AS stub

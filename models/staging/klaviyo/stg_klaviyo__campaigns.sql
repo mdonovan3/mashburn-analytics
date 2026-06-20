@@ -1,12 +1,8 @@
 {{ config(materialized='view') }}
 
-SELECT
-    CAST(id AS STRING)   AS campaign_id,
-    name,
-    subject,
-    status,
-    list_id,
-    open_rate,
-    click_rate,
-    CAST(sent_at AS TIMESTAMP) AS sent_at
-FROM {{ source('klaviyo', 'campaigns') }}
+-- TODO: Rename and cast from raw_klaviyo.campaigns
+--   id → campaign_id (STRING)
+--   name, subject, status, list_id, open_rate, click_rate
+--   sent_at → TIMESTAMP
+
+SELECT 1 AS stub
