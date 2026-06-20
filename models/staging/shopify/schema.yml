@@ -1,0 +1,84 @@
+version: 2
+
+models:
+  - name: stg_shopify__orders
+    description: "One row per Shopify order (header only — no line items)"
+    columns:
+      - name: order_id
+        tests: [unique, not_null]
+      - name: customer_id
+        tests: [not_null]
+      - name: financial_status
+        tests:
+          - accepted_values:
+              values: ['paid', 'refunded', 'partially_refunded', 'pending', 'voided']
+      - name: fulfillment_status
+        tests:
+          - accepted_values:
+              values: ['fulfilled', 'partial', 'unfulfilled', null]
+      - name: channel
+        tests:
+          - accepted_values:
+              values: ['ecommerce', 'pos']
+      - name: source_name
+        tests: [not_null]
+
+  - name: stg_shopify__order_line_items
+    description: "One row per line item, unnested from Shopify orders"
+    columns:
+      - name: line_item_id
+        tests: [unique, not_null]
+      - name: order_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_shopify__orders')
+              field: order_id
+      - name: product_id
+        tests: [not_null]
+      - name: quantity
+        tests: [not_null]
+
+  - name: stg_shopify__customers
+    description: "One row per Shopify customer"
+    columns:
+      - name: customer_id
+        tests: [unique, not_null]
+      - name: email
+        tests: [unique, not_null]
+
+  - name: stg_shopify__products
+    description: "One row per Shopify product"
+    columns:
+      - name: product_id
+        tests: [unique, not_null]
+      - name: status
+        tests:
+          - accepted_values:
+              values: ['active', 'archived', 'draft']
+
+  - name: stg_shopify__product_variants
+    description: "One row per product variant"
+    columns:
+      - name: variant_id
+        tests: [unique, not_null]
+      - name: product_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_shopify__products')
+              field: product_id
+
+  - name: stg_shopify__inventory_levels
+    description: "Stock levels by variant x location"
+    columns:
+      - name: inventory_item_id
+        tests: [not_null]
+      - name: location_id
+        tests: [not_null]
+
+  - name: stg_shopify__locations
+    description: "Sid Mashburn store locations"
+    columns:
+      - name: location_id
+        tests: [unique, not_null]

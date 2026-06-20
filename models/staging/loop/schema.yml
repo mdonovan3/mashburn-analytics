@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_loop__return_requests
+    description: "Loop Returns — one row per return request"
+    columns:
+      - name: return_id
+        tests: [unique, not_null]
+      - name: order_id
+        tests: [not_null]
+      - name: customer_email
+        tests: [not_null]
+      - name: state
+        tests:
+          - accepted_values:
+              values: ['pending', 'approved', 'received', 'complete', 'cancelled']
+      - name: return_type
+        tests:
+          - accepted_values:
+              values: ['exchange', 'refund', 'credit', 'upsell', 'exchange+refund', 'exchange+credit']
+
+  - name: stg_loop__return_line_items
+    description: "Loop return line items"
+    columns:
+      - name: return_line_item_id
+        tests: [unique, not_null]
+      - name: return_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_loop__return_requests')
+              field: return_id
+      - name: outcome
+        tests:
+          - accepted_values:
+              values: ['reject', 'donate', 'review', 'keep', 'default']

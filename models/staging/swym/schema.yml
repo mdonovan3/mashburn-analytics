@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_swym__wishlist_events
+    description: "Swym wishlist add/remove events with renamed fields"
+    columns:
+      - name: event_id
+        tests: [unique, not_null]
+      - name: product_id
+        tests: [not_null]
+
+  - name: stg_swym__waitlist_signups
+    description: "Back-in-stock waitlist signups"
+    columns:
+      - name: customer_email
+        tests: [not_null]
+      - name: variant_id
+        tests: [not_null]

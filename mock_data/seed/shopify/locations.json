@@ -1,0 +1,76 @@
+{
+  "locations": [
+    {
+      "id": 101,
+      "name": "Atlanta Flagship",
+      "city": "Atlanta",
+      "province": "GA",
+      "country": "US",
+      "zip": "30305",
+      "active": true
+    },
+    {
+      "id": 102,
+      "name": "Dallas",
+      "city": "Dallas",
+      "province": "TX",
+      "country": "US",
+      "zip": "75205",
+      "active": true
+    },
+    {
+      "id": 103,
+      "name": "Washington DC",
+      "city": "Washington",
+      "province": "DC",
+      "country": "US",
+      "zip": "20007",
+      "active": true
+    },
+    {
+      "id": 104,
+      "name": "Nashville",
+      "city": "Nashville",
+      "province": "TN",
+      "country": "US",
+      "zip": "37205",
+      "active": true
+    },
+    {
+      "id": 105,
+      "name": "Houston",
+      "city": "Houston",
+      "province": "TX",
+      "country": "US",
+      "zip": "77019",
+      "active": true
+    },
+    {
+      "id": 106,
+      "name": "Charlotte",
+      "city": "Charlotte",
+      "province": "NC",
+      "country": "US",
+      "zip": "28207",
+      "active": true
+    },
+    {
+      "id": 107,
+      "name": "New Orleans",
+      "city": "New Orleans",
+      "province": "LA",
+      "country": "US",
+      "zip": "70130",
+      "active": true
+    },
+    {
+      "id": 108,
+      "name": "Austin",
+      "city": "Austin",
+      "province": "TX",
+      "country": "US",
+      "zip": "78746",
+      "active": true
+    }
+  ]
+}

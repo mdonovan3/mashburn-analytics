@@ -1,0 +1,404 @@
+{
+  "customers": [
+    {
+      "id": 1001,
+      "email": "james.whitfield@gmail.com",
+      "first_name": "James",
+      "last_name": "Whitfield",
+      "phone": "404-555-0101",
+      "orders_count": 5,
+      "total_spent": 4250.0,
+      "tags": "vip",
+      "accepts_marketing": true,
+      "created_at": "2024-02-14T10:00:00Z",
+      "updated_at": "2026-03-01T00:00:00Z",
+      "default_address": {
+        "address1": "425 Peachtree Hills Ave NE",
+        "city": "Atlanta",
+        "province": "GA",
+        "country": "US",
+        "zip": "30305"
+      }
+    },
+    {
+      "id": 1002,
+      "email": "sarah.brennan@hotmail.com",
+      "first_name": "Sarah",
+      "last_name": "Brennan",
+      "phone": "214-555-0102",
+      "orders_count": 3,
+      "total_spent": 1180.0,
+      "tags": "",
+      "accepts_marketing": false,
+      "created_at": "2024-04-20T10:00:00Z",
+      "updated_at": "2026-01-15T00:00:00Z",
+      "default_address": {
+        "address1": "3107 Fairmount St",
+        "city": "Dallas",
+        "province": "TX",
+        "country": "US",
+        "zip": "75201"
+      }
+    },
+    {
+      "id": 1003,
+      "email": "michael.torrence@gmail.com",
+      "first_name": "Michael",
+      "last_name": "Torrence",
+      "phone": "202-555-0103",
+      "orders_count": 7,
+      "total_spent": 8920.0,
+      "tags": "vip,loyal",
+      "accepts_marketing": true,
+      "created_at": "2023-11-05T10:00:00Z",
+      "updated_at": "2026-04-10T00:00:00Z",
+      "default_address": {
+        "address1": "1600 K St NW",
+        "city": "Washington",
+        "province": "DC",
+        "country": "US",
+        "zip": "20006"
+      }
+    },
+    {
+      "id": 1004,
+      "email": "caroline.hayes@gmail.com",
+      "first_name": "Caroline",
+      "last_name": "Hayes",
+      "phone": "615-555-0104",
+      "orders_count": 2,
+      "total_spent": 760.0,
+      "tags": "",
+      "accepts_marketing": true,
+      "created_at": "2025-01-10T10:00:00Z",
+      "updated_at": "2025-10-01T00:00:00Z",
+      "default_address": {
+        "address1": "4701 Tara Dr",
+        "city": "Nashville",
+        "province": "TN",
+        "country": "US",
+        "zip": "37215"
+      }
+    },
+    {
+      "id": 1005,
+      "email": "robert.lindsey@outlook.com",
+      "first_name": "Robert",
+      "last_name": "Lindsey",
+      "phone": "713-555-0105",
+      "orders_count": 4,
+      "total_spent": 2395.0,
+      "tags": "vip",
+      "accepts_marketing": false,
+      "created_at": "2024-06-18T10:00:00Z",
+      "updated_at": "2026-02-14T00:00:00Z",
+      "default_address": {
+        "address1": "2727 Kirby Dr",
+        "city": "Houston",
+        "province": "TX",
+        "country": "US",
+        "zip": "77098"
+      }
+    },
+    {
+      "id": 1006,
+      "email": "anne.sterling@gmail.com",
+      "first_name": "Anne",
+      "last_name": "Sterling",
+      "phone": "704-555-0106",
+      "orders_count": 2,
+      "total_spent": 530.0,
+      "tags": "",
+      "accepts_marketing": true,
+      "created_at": "2025-03-22T10:00:00Z",
+      "updated_at": "2025-12-01T00:00:00Z",
+      "default_address": {
+        "address1": "1900 South Blvd",
+        "city": "Charlotte",
+        "province": "NC",
+        "country": "US",
+        "zip": "28203"
+      }
+    },
+    {
+      "id": 1007,
+      "email": "david.park@gmail.com",
+      "first_name": "David",
+      "last_name": "Park",
+      "phone": "504-555-0107",
+      "orders_count": 3,
+      "total_spent": 1650.0,
+      "tags": "loyal",
+      "accepts_marketing": true,
+      "created_at": "2024-09-12T10:00:00Z",
+      "updated_at": "2026-01-20T00:00:00Z",
+      "default_address": {
+        "address1": "900 Magazine St",
+        "city": "New Orleans",
+        "province": "LA",
+        "country": "US",
+        "zip": "70130"
+      }
+    },
+    {
+      "id": 1008,
+      "email": "elizabeth.moore@gmail.com",
+      "first_name": "Elizabeth",
+      "last_name": "Moore",
+      "phone": "512-555-0108",
+      "orders_count": 6,
+      "total_spent": 3840.0,
+      "tags": "vip,loyal",
+      "accepts_marketing": true,
+      "created_at": "2023-08-30T10:00:00Z",
+      "updated_at": "2026-05-01T00:00:00Z",
+      "default_address": {
+        "address1": "3001 Bee Cave Rd",
+        "city": "Austin",
+        "province": "TX",
+        "country": "US",
+        "zip": "78746"
+      }
+    },
+    {
+      "id": 1009,
+      "email": "thomas.greer@yahoo.com",
+      "first_name": "Thomas",
+      "last_name": "Greer",
+      "phone": "404-555-0109",
+      "orders_count": 1,
+      "total_spent": 285.0,
+      "tags": "",
+      "accepts_marketing": false,
+      "created_at": "2026-01-05T10:00:00Z",
+      "updated_at": "2026-01-05T10:00:00Z",
+      "default_address": {
+        "address1": "2100 Powers Ferry Rd",
+        "city": "Atlanta",
+        "province": "GA",
+        "country": "US",
+        "zip": "30339"
+      }
+    },
+    {
+      "id": 1010,
+      "email": "patricia.wu@gmail.com",
+      "first_name": "Patricia",
+      "last_name": "Wu",
+      "phone": "214-555-0110",
+      "orders_count": 3,
+      "total_spent": 1085.0,
+      "tags": "loyal",
+      "accepts_marketing": true,
+      "created_at": "2024-07-14T10:00:00Z",
+      "updated_at": "2025-11-15T00:00:00Z",
+      "default_address": {
+        "address1": "4420 Lovers Ln",
+        "city": "Dallas",
+        "province": "TX",
+        "country": "US",
+        "zip": "75225"
+      }
+    },
+    {
+      "id": 1011,
+      "email": "william.foster@gmail.com",
+      "first_name": "William",
+      "last_name": "Foster",
+      "phone": "202-555-0111",
+      "orders_count": 4,
+      "total_spent": 2780.0,
+      "tags": "vip",
+      "accepts_marketing": true,
+      "created_at": "2024-03-01T10:00:00Z",
+      "updated_at": "2026-03-20T00:00:00Z",
+      "default_address": {
+        "address1": "3038 N Street NW",
+        "city": "Washington",
+        "province": "DC",
+        "country": "US",
+        "zip": "20007"
+      }
+    },
+    {
+      "id": 1012,
+      "email": "jennifer.cross@gmail.com",
+      "first_name": "Jennifer",
+      "last_name": "Cross",
+      "phone": "615-555-0112",
+      "orders_count": 2,
+      "total_spent": 440.0,
+      "tags": "",
+      "accepts_marketing": true,
+      "created_at": "2025-05-18T10:00:00Z",
+      "updated_at": "2025-12-01T00:00:00Z",
+      "default_address": {
+        "address1": "2200 West End Ave",
+        "city": "Nashville",
+        "province": "TN",
+        "country": "US",
+        "zip": "37203"
+      }
+    },
+    {
+      "id": 1013,
+      "email": "charles.ingram@gmail.com",
+      "first_name": "Charles",
+      "last_name": "Ingram",
+      "phone": "713-555-0113",
+      "orders_count": 5,
+      "total_spent": 5690.0,
+      "tags": "vip,loyal",
+      "accepts_marketing": false,
+      "created_at": "2023-12-10T10:00:00Z",
+      "updated_at": "2026-04-05T00:00:00Z",
+      "default_address": {
+        "address1": "5135 Buffalo Speedway",
+        "city": "Houston",
+        "province": "TX",
+        "country": "US",
+        "zip": "77005"
+      }
+    },
+    {
+      "id": 1014,
+      "email": "margaret.cole@outlook.com",
+      "first_name": "Margaret",
+      "last_name": "Cole",
+      "phone": "504-555-0114",
+      "orders_count": 1,
+      "total_spent": 395.0,
+      "tags": "",
+      "accepts_marketing": true,
+      "created_at": "2025-09-20T10:00:00Z",
+      "updated_at": "2025-09-20T10:00:00Z",
+      "default_address": {
+        "address1": "1215 Prytania St",
+        "city": "New Orleans",
+        "province": "LA",
+        "country": "US",
+        "zip": "70130"
+      }
+    },
+    {
+      "id": 1015,
+      "email": "henry.shaw@gmail.com",
+      "first_name": "Henry",
+      "last_name": "Shaw",
+      "phone": "512-555-0115",
+      "orders_count": 3,
+      "total_spent": 1575.0,
+      "tags": "loyal",
+      "accepts_marketing": true,
+      "created_at": "2024-10-08T10:00:00Z",
+      "updated_at": "2026-02-28T00:00:00Z",
+      "default_address": {
+        "address1": "1100 Congress Ave",
+        "city": "Austin",
+        "province": "TX",
+        "country": "US",
+        "zip": "78701"
+      }
+    },
+    {
+      "id": 1016,
+      "email": "dorothy.james@gmail.com",
+      "first_name": "Dorothy",
+      "last_name": "James",
+      "phone": "404-555-0116",
+      "orders_count": 2,
+      "total_spent": 900.0,
+      "tags": "",
+      "accepts_marketing": true,
+      "created_at": "2025-02-14T10:00:00Z",
+      "updated_at": "2025-11-01T00:00:00Z",
+      "default_address": {
+        "address1": "3130 Maple Dr NE",
+        "city": "Atlanta",
+        "province": "GA",
+        "country": "US",
+        "zip": "30305"
+      }
+    },
+    {
+      "id": 1017,
+      "email": "george.butler@gmail.com",
+      "first_name": "George",
+      "last_name": "Butler",
+      "phone": "704-555-0117",
+      "orders_count": 1,
+      "total_spent": 1695.0,
+      "tags": "vip",
+      "accepts_marketing": false,
+      "created_at": "2026-02-01T10:00:00Z",
+      "updated_at": "2026-02-01T10:00:00Z",
+      "default_address": {
+        "address1": "625 Providence Rd",
+        "city": "Charlotte",
+        "province": "NC",
+        "country": "US",
+        "zip": "28207"
+      }
+    },
+    {
+      "id": 1018,
+      "email": "helen.price@gmail.com",
+      "first_name": "Helen",
+      "last_name": "Price",
+      "phone": "214-555-0118",
+      "orders_count": 4,
+      "total_spent": 2040.0,
+      "tags": "loyal",
+      "accepts_marketing": true,
+      "created_at": "2024-05-05T10:00:00Z",
+      "updated_at": "2026-01-10T00:00:00Z",
+      "default_address": {
+        "address1": "4500 Roland Ave",
+        "city": "Dallas",
+        "province": "TX",
+        "country": "US",
+        "zip": "75219"
+      }
+    },
+    {
+      "id": 1019,
+      "email": "frank.morgan@gmail.com",
+      "first_name": "Frank",
+      "last_name": "Morgan",
+      "phone": "713-555-0119",
+      "orders_count": 2,
+      "total_spent": 820.0,
+      "tags": "",
+      "accepts_marketing": true,
+      "created_at": "2025-04-12T10:00:00Z",
+      "updated_at": "2025-12-20T00:00:00Z",
+      "default_address": {
+        "address1": "2100 Westheimer Rd",
+        "city": "Houston",
+        "province": "TX",
+        "country": "US",
+        "zip": "77098"
+      }
+    },
+    {
+      "id": 1020,
+      "email": "ruth.turner@gmail.com",
+      "first_name": "Ruth",
+      "last_name": "Turner",
+      "phone": "615-555-0120",
+      "orders_count": 3,
+      "total_spent": 1235.0,
+      "tags": "loyal",
+      "accepts_marketing": true,
+      "created_at": "2024-08-22T10:00:00Z",
+      "updated_at": "2026-03-15T00:00:00Z",
+      "default_address": {
+        "address1": "4023 Hillsboro Pike",
+        "city": "Nashville",
+        "province": "TN",
+        "country": "US",
+        "zip": "37215"
+      }
+    }
+  ]
+}

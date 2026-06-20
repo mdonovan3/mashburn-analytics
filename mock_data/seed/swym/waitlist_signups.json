@@ -1,0 +1,94 @@
+{
+  "waitlist": [
+    {
+      "empi": 1001,
+      "epi": 2005,
+      "sku": "WLT-44R",
+      "customer_email": "michael.torrence@gmail.com",
+      "signed_up_at": "2026-05-01T12:00:00Z",
+      "notified_at": "2026-05-10T12:00:00Z",
+      "purchased_at": null
+    },
+    {
+      "empi": 1015,
+      "epi": 2055,
+      "sku": "CSH-XS",
+      "customer_email": "caroline.hayes@gmail.com",
+      "signed_up_at": "2026-05-02T12:00:00Z",
+      "notified_at": "2026-05-09T12:00:00Z",
+      "purchased_at": "2026-05-15T12:00:00Z"
+    },
+    {
+      "empi": 1001,
+      "epi": 2005,
+      "sku": "WLT-44R",
+      "customer_email": "helen.price@gmail.com",
+      "signed_up_at": "2026-05-03T12:00:00Z",
+      "notified_at": "2026-05-10T12:00:00Z",
+      "purchased_at": null
+    },
+    {
+      "empi": 1008,
+      "epi": 2033,
+      "sku": "PLO-L-GRN",
+      "customer_email": "patricia.wu@gmail.com",
+      "signed_up_at": "2026-05-04T12:00:00Z",
+      "notified_at": null,
+      "purchased_at": null
+    },
+    {
+      "empi": 1001,
+      "epi": 2005,
+      "sku": "WLT-44R",
+      "customer_email": "henry.shaw@gmail.com",
+      "signed_up_at": "2026-05-05T12:00:00Z",
+      "notified_at": "2026-05-10T12:00:00Z",
+      "purchased_at": null
+    },
+    {
+      "empi": 1008,
+      "epi": 2034,
+      "sku": "PLO-XL-NVY",
+      "customer_email": "james.whitfield@gmail.com",
+      "signed_up_at": "2026-05-06T12:00:00Z",
+      "notified_at": null,
+      "purchased_at": null
+    },
+    {
+      "empi": 1015,
+      "epi": 2058,
+      "sku": "CSH-L",
+      "customer_email": "jennifer.cross@gmail.com",
+      "signed_up_at": "2026-05-08T12:00:00Z",
+      "notified_at": "2026-05-15T12:00:00Z",
+      "purchased_at": null
+    },
+    {
+      "empi": 1008,
+      "epi": 2033,
+      "sku": "PLO-L-GRN",
+      "customer_email": "george.butler@gmail.com",
+      "signed_up_at": "2026-05-10T12:00:00Z",
+      "notified_at": null,
+      "purchased_at": null
+    },
+    {
+      "empi": 1008,
+      "epi": 2034,
+      "sku": "PLO-XL-NVY",
+      "customer_email": "anne.sterling@gmail.com",
+      "signed_up_at": "2026-05-12T12:00:00Z",
+      "notified_at": null,
+      "purchased_at": null
+    },
+    {
+      "empi": 1011,
+      "epi": 2046,
+      "sku": "MDR-XL",
+      "customer_email": "elizabeth.moore@gmail.com",
+      "signed_up_at": "2026-05-20T12:00:00Z",
+      "notified_at": null,
+      "purchased_at": null
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_klaviyo__email_events
+    description: "Klaviyo email events (sent, opened, clicked, etc.)"
+    columns:
+      - name: event_id
+        tests: [unique, not_null]
+      - name: customer_email
+        tests: [not_null]
+      - name: event_type
+        tests:
+          - accepted_values:
+              values: ['sent', 'opened', 'clicked', 'bounced', 'unsubscribed']
+
+  - name: stg_klaviyo__campaigns
+    description: "Klaviyo campaigns"
+    columns:
+      - name: campaign_id
+        tests: [unique, not_null]

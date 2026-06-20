@@ -1,0 +1,54 @@
+{
+  "campaigns": [
+    {
+      "id": "camp_001",
+      "name": "Spring Collection 2026",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "status": "sent",
+      "sent_at": "2026-05-01T10:00:00Z",
+      "list_id": "list_all_subscribers",
+      "open_rate": 0.28,
+      "click_rate": 0.04
+    },
+    {
+      "id": "camp_002",
+      "name": "Custom Denim Launch",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "status": "sent",
+      "sent_at": "2026-05-08T10:00:00Z",
+      "list_id": "list_all_subscribers",
+      "open_rate": 0.31,
+      "click_rate": 0.06
+    },
+    {
+      "id": "camp_003",
+      "name": "Ann Loves Lately \u2014 May Edit",
+      "subject": "What Ann's been wearing this month",
+      "status": "sent",
+      "sent_at": "2026-05-14T10:00:00Z",
+      "list_id": "list_all_subscribers",
+      "open_rate": 0.33,
+      "click_rate": 0.05
+    },
+    {
+      "id": "camp_004",
+      "name": "Mother's Day Gift Guide",
+      "subject": "Still looking? We've got you covered.",
+      "status": "sent",
+      "sent_at": "2026-05-09T10:00:00Z",
+      "list_id": "list_all_subscribers",
+      "open_rate": 0.25,
+      "click_rate": 0.03
+    },
+    {
+      "id": "camp_005",
+      "name": "VIP Early Access \u2014 Summer",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "status": "sent",
+      "sent_at": "2026-05-22T10:00:00Z",
+      "list_id": "list_vip",
+      "open_rate": 0.45,
+      "click_rate": 0.12
+    }
+  ]
+}

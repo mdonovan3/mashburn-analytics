@@ -1,0 +1,1129 @@
+{
+  "events": [
+    {
+      "id": "ev_9001",
+      "customer_email": "james.whitfield@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "ev_9002",
+      "customer_email": "james.whitfield@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T11:30:00Z"
+    },
+    {
+      "id": "ev_9003",
+      "customer_email": "james.whitfield@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T10:00:00Z"
+    },
+    {
+      "id": "ev_9004",
+      "customer_email": "james.whitfield@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T11:30:00Z"
+    },
+    {
+      "id": "ev_9005",
+      "customer_email": "james.whitfield@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "clicked",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T11:45:00Z"
+    },
+    {
+      "id": "ev_9006",
+      "customer_email": "james.whitfield@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T10:00:00Z"
+    },
+    {
+      "id": "ev_9007",
+      "customer_email": "james.whitfield@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T11:30:00Z"
+    },
+    {
+      "id": "ev_9008",
+      "customer_email": "james.whitfield@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T10:00:00Z"
+    },
+    {
+      "id": "ev_9009",
+      "customer_email": "james.whitfield@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T11:30:00Z"
+    },
+    {
+      "id": "ev_9010",
+      "customer_email": "james.whitfield@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T10:00:00Z"
+    },
+    {
+      "id": "ev_9011",
+      "customer_email": "james.whitfield@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T11:30:00Z"
+    },
+    {
+      "id": "ev_9012",
+      "customer_email": "james.whitfield@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "clicked",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T11:45:00Z"
+    },
+    {
+      "id": "ev_9013",
+      "customer_email": "michael.torrence@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "ev_9014",
+      "customer_email": "michael.torrence@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T11:30:00Z"
+    },
+    {
+      "id": "ev_9015",
+      "customer_email": "michael.torrence@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "clicked",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T11:45:00Z"
+    },
+    {
+      "id": "ev_9016",
+      "customer_email": "michael.torrence@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T10:00:00Z"
+    },
+    {
+      "id": "ev_9017",
+      "customer_email": "michael.torrence@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T11:30:00Z"
+    },
+    {
+      "id": "ev_9018",
+      "customer_email": "michael.torrence@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T10:00:00Z"
+    },
+    {
+      "id": "ev_9019",
+      "customer_email": "michael.torrence@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T11:30:00Z"
+    },
+    {
+      "id": "ev_9020",
+      "customer_email": "michael.torrence@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T10:00:00Z"
+    },
+    {
+      "id": "ev_9021",
+      "customer_email": "michael.torrence@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T10:00:00Z"
+    },
+    {
+      "id": "ev_9022",
+      "customer_email": "michael.torrence@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T11:30:00Z"
+    },
+    {
+      "id": "ev_9023",
+      "customer_email": "michael.torrence@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "clicked",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T11:45:00Z"
+    },
+    {
+      "id": "ev_9024",
+      "customer_email": "caroline.hayes@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "ev_9025",
+      "customer_email": "caroline.hayes@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T11:30:00Z"
+    },
+    {
+      "id": "ev_9026",
+      "customer_email": "caroline.hayes@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T10:00:00Z"
+    },
+    {
+      "id": "ev_9027",
+      "customer_email": "caroline.hayes@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T10:00:00Z"
+    },
+    {
+      "id": "ev_9028",
+      "customer_email": "caroline.hayes@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T11:30:00Z"
+    },
+    {
+      "id": "ev_9029",
+      "customer_email": "caroline.hayes@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "clicked",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T11:45:00Z"
+    },
+    {
+      "id": "ev_9030",
+      "customer_email": "caroline.hayes@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T10:00:00Z"
+    },
+    {
+      "id": "ev_9031",
+      "customer_email": "caroline.hayes@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T11:30:00Z"
+    },
+    {
+      "id": "ev_9032",
+      "customer_email": "anne.sterling@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "ev_9033",
+      "customer_email": "anne.sterling@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T11:30:00Z"
+    },
+    {
+      "id": "ev_9034",
+      "customer_email": "anne.sterling@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T10:00:00Z"
+    },
+    {
+      "id": "ev_9035",
+      "customer_email": "anne.sterling@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T10:00:00Z"
+    },
+    {
+      "id": "ev_9036",
+      "customer_email": "anne.sterling@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T10:00:00Z"
+    },
+    {
+      "id": "ev_9037",
+      "customer_email": "anne.sterling@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T11:30:00Z"
+    },
+    {
+      "id": "ev_9038",
+      "customer_email": "david.park@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "ev_9039",
+      "customer_email": "david.park@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T11:30:00Z"
+    },
+    {
+      "id": "ev_9040",
+      "customer_email": "david.park@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T10:00:00Z"
+    },
+    {
+      "id": "ev_9041",
+      "customer_email": "david.park@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T11:30:00Z"
+    },
+    {
+      "id": "ev_9042",
+      "customer_email": "david.park@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "clicked",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T11:45:00Z"
+    },
+    {
+      "id": "ev_9043",
+      "customer_email": "david.park@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T10:00:00Z"
+    },
+    {
+      "id": "ev_9044",
+      "customer_email": "david.park@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T10:00:00Z"
+    },
+    {
+      "id": "ev_9045",
+      "customer_email": "david.park@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T10:00:00Z"
+    },
+    {
+      "id": "ev_9046",
+      "customer_email": "david.park@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T11:30:00Z"
+    },
+    {
+      "id": "ev_9047",
+      "customer_email": "david.park@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "clicked",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T11:45:00Z"
+    },
+    {
+      "id": "ev_9048",
+      "customer_email": "elizabeth.moore@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "ev_9049",
+      "customer_email": "elizabeth.moore@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T11:30:00Z"
+    },
+    {
+      "id": "ev_9050",
+      "customer_email": "elizabeth.moore@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T10:00:00Z"
+    },
+    {
+      "id": "ev_9051",
+      "customer_email": "elizabeth.moore@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T10:00:00Z"
+    },
+    {
+      "id": "ev_9052",
+      "customer_email": "elizabeth.moore@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T11:30:00Z"
+    },
+    {
+      "id": "ev_9053",
+      "customer_email": "elizabeth.moore@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "clicked",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T11:45:00Z"
+    },
+    {
+      "id": "ev_9054",
+      "customer_email": "elizabeth.moore@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T10:00:00Z"
+    },
+    {
+      "id": "ev_9055",
+      "customer_email": "elizabeth.moore@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T11:30:00Z"
+    },
+    {
+      "id": "ev_9056",
+      "customer_email": "elizabeth.moore@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T10:00:00Z"
+    },
+    {
+      "id": "ev_9057",
+      "customer_email": "elizabeth.moore@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T11:30:00Z"
+    },
+    {
+      "id": "ev_9058",
+      "customer_email": "elizabeth.moore@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "clicked",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T11:45:00Z"
+    },
+    {
+      "id": "ev_9059",
+      "customer_email": "patricia.wu@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "ev_9060",
+      "customer_email": "patricia.wu@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T11:30:00Z"
+    },
+    {
+      "id": "ev_9061",
+      "customer_email": "patricia.wu@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T10:00:00Z"
+    },
+    {
+      "id": "ev_9062",
+      "customer_email": "patricia.wu@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T11:30:00Z"
+    },
+    {
+      "id": "ev_9063",
+      "customer_email": "patricia.wu@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "clicked",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T11:45:00Z"
+    },
+    {
+      "id": "ev_9064",
+      "customer_email": "patricia.wu@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T10:00:00Z"
+    },
+    {
+      "id": "ev_9065",
+      "customer_email": "patricia.wu@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T11:30:00Z"
+    },
+    {
+      "id": "ev_9066",
+      "customer_email": "patricia.wu@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T10:00:00Z"
+    },
+    {
+      "id": "ev_9067",
+      "customer_email": "patricia.wu@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T10:00:00Z"
+    },
+    {
+      "id": "ev_9068",
+      "customer_email": "william.foster@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "ev_9069",
+      "customer_email": "william.foster@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T11:30:00Z"
+    },
+    {
+      "id": "ev_9070",
+      "customer_email": "william.foster@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T10:00:00Z"
+    },
+    {
+      "id": "ev_9071",
+      "customer_email": "william.foster@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T10:00:00Z"
+    },
+    {
+      "id": "ev_9072",
+      "customer_email": "william.foster@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T10:00:00Z"
+    },
+    {
+      "id": "ev_9073",
+      "customer_email": "william.foster@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T10:00:00Z"
+    },
+    {
+      "id": "ev_9074",
+      "customer_email": "william.foster@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T11:30:00Z"
+    },
+    {
+      "id": "ev_9075",
+      "customer_email": "william.foster@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "clicked",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T11:45:00Z"
+    },
+    {
+      "id": "ev_9076",
+      "customer_email": "jennifer.cross@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "ev_9077",
+      "customer_email": "jennifer.cross@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T10:00:00Z"
+    },
+    {
+      "id": "ev_9078",
+      "customer_email": "jennifer.cross@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T10:00:00Z"
+    },
+    {
+      "id": "ev_9079",
+      "customer_email": "jennifer.cross@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T11:30:00Z"
+    },
+    {
+      "id": "ev_9080",
+      "customer_email": "jennifer.cross@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T10:00:00Z"
+    },
+    {
+      "id": "ev_9081",
+      "customer_email": "jennifer.cross@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T11:30:00Z"
+    },
+    {
+      "id": "ev_9082",
+      "customer_email": "margaret.cole@outlook.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "ev_9083",
+      "customer_email": "margaret.cole@outlook.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T11:30:00Z"
+    },
+    {
+      "id": "ev_9084",
+      "customer_email": "margaret.cole@outlook.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T10:00:00Z"
+    },
+    {
+      "id": "ev_9085",
+      "customer_email": "margaret.cole@outlook.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T10:00:00Z"
+    },
+    {
+      "id": "ev_9086",
+      "customer_email": "margaret.cole@outlook.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T11:30:00Z"
+    },
+    {
+      "id": "ev_9087",
+      "customer_email": "margaret.cole@outlook.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "clicked",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T11:45:00Z"
+    },
+    {
+      "id": "ev_9088",
+      "customer_email": "margaret.cole@outlook.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T10:00:00Z"
+    },
+    {
+      "id": "ev_9089",
+      "customer_email": "henry.shaw@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "ev_9090",
+      "customer_email": "henry.shaw@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T11:30:00Z"
+    },
+    {
+      "id": "ev_9091",
+      "customer_email": "henry.shaw@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "clicked",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T11:45:00Z"
+    },
+    {
+      "id": "ev_9092",
+      "customer_email": "henry.shaw@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T10:00:00Z"
+    },
+    {
+      "id": "ev_9093",
+      "customer_email": "henry.shaw@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T11:30:00Z"
+    },
+    {
+      "id": "ev_9094",
+      "customer_email": "henry.shaw@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T10:00:00Z"
+    },
+    {
+      "id": "ev_9095",
+      "customer_email": "henry.shaw@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T10:00:00Z"
+    },
+    {
+      "id": "ev_9096",
+      "customer_email": "henry.shaw@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T10:00:00Z"
+    },
+    {
+      "id": "ev_9097",
+      "customer_email": "henry.shaw@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T11:30:00Z"
+    },
+    {
+      "id": "ev_9098",
+      "customer_email": "dorothy.james@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "ev_9099",
+      "customer_email": "dorothy.james@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T10:00:00Z"
+    },
+    {
+      "id": "ev_9100",
+      "customer_email": "dorothy.james@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T10:00:00Z"
+    },
+    {
+      "id": "ev_9101",
+      "customer_email": "dorothy.james@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T10:00:00Z"
+    },
+    {
+      "id": "ev_9102",
+      "customer_email": "dorothy.james@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T11:30:00Z"
+    },
+    {
+      "id": "ev_9103",
+      "customer_email": "helen.price@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "ev_9104",
+      "customer_email": "helen.price@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T11:30:00Z"
+    },
+    {
+      "id": "ev_9105",
+      "customer_email": "helen.price@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T10:00:00Z"
+    },
+    {
+      "id": "ev_9106",
+      "customer_email": "helen.price@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T11:30:00Z"
+    },
+    {
+      "id": "ev_9107",
+      "customer_email": "helen.price@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "clicked",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T11:45:00Z"
+    },
+    {
+      "id": "ev_9108",
+      "customer_email": "helen.price@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T10:00:00Z"
+    },
+    {
+      "id": "ev_9109",
+      "customer_email": "helen.price@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T11:30:00Z"
+    },
+    {
+      "id": "ev_9110",
+      "customer_email": "helen.price@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T10:00:00Z"
+    },
+    {
+      "id": "ev_9111",
+      "customer_email": "helen.price@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T10:00:00Z"
+    },
+    {
+      "id": "ev_9112",
+      "customer_email": "helen.price@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T11:30:00Z"
+    },
+    {
+      "id": "ev_9113",
+      "customer_email": "helen.price@gmail.com",
+      "campaign_id": "camp_005",
+      "flow_id": null,
+      "event_type": "clicked",
+      "subject": "You're getting it first \u2014 summer preview inside",
+      "created_at": "2026-05-22T11:45:00Z"
+    },
+    {
+      "id": "ev_9114",
+      "customer_email": "frank.morgan@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "ev_9115",
+      "customer_email": "frank.morgan@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T11:30:00Z"
+    },
+    {
+      "id": "ev_9116",
+      "customer_email": "frank.morgan@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T10:00:00Z"
+    },
+    {
+      "id": "ev_9117",
+      "customer_email": "frank.morgan@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T10:00:00Z"
+    },
+    {
+      "id": "ev_9118",
+      "customer_email": "frank.morgan@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T10:00:00Z"
+    },
+    {
+      "id": "ev_9119",
+      "customer_email": "ruth.turner@gmail.com",
+      "campaign_id": "camp_001",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Spring is here \u2014 shop the new arrivals",
+      "created_at": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "ev_9120",
+      "customer_email": "ruth.turner@gmail.com",
+      "campaign_id": "camp_002",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Custom Levi's are back \u2014 get yours before they're gone",
+      "created_at": "2026-05-08T10:00:00Z"
+    },
+    {
+      "id": "ev_9121",
+      "customer_email": "ruth.turner@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T10:00:00Z"
+    },
+    {
+      "id": "ev_9122",
+      "customer_email": "ruth.turner@gmail.com",
+      "campaign_id": "camp_003",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "What Ann's been wearing this month",
+      "created_at": "2026-05-14T11:30:00Z"
+    },
+    {
+      "id": "ev_9123",
+      "customer_email": "ruth.turner@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "sent",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T10:00:00Z"
+    },
+    {
+      "id": "ev_9124",
+      "customer_email": "ruth.turner@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "opened",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T11:30:00Z"
+    },
+    {
+      "id": "ev_9125",
+      "customer_email": "ruth.turner@gmail.com",
+      "campaign_id": "camp_004",
+      "flow_id": null,
+      "event_type": "clicked",
+      "subject": "Still looking? We've got you covered.",
+      "created_at": "2026-05-09T11:45:00Z"
+    }
+  ]
+}

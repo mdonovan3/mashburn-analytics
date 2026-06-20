@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_shiphero__shipments
+    description: "One row per ShipHero shipment"
+    columns:
+      - name: shipment_id
+        tests: [unique, not_null]
+      - name: order_id
+        tests: [not_null]
+
+  - name: stg_shiphero__shipping_labels
+    description: "One row per shipping label, unnested from shipments"
+    columns:
+      - name: label_id
+        tests: [unique, not_null]
+      - name: shipment_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_shiphero__shipments')
+              field: shipment_id
+      - name: label_status
+        tests:
+          - accepted_values:
+              values: ['delivered', 'in_transit', 'pending', 'created']
