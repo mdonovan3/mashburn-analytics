@@ -1,0 +1,82 @@
+site_name: Mashburn Analytics — Ecosystem Docs
+site_description: >-
+  Documentation for the mashburn-analytics data platform: a mock dbt/BigQuery
+  project plus a proposed production ingestion architecture, drafted as
+  preliminary planning ahead of a potential Data Engineer offer.
+repo_url: https://github.com/mdonovan3/mashburn-analytics
+repo_name: mdonovan3/mashburn-analytics
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Home: index.md
+  - Architecture:
+      - Overview: architecture/overview.md
+      - Ingestion Layer: architecture/ingestion.md
+      - Orchestration & Deployment: architecture/orchestration-deployment.md
+      - Warehouse & Modeling: architecture/warehouse-modeling.md
+      - Managed vs. Self-Hosted: architecture/managed-vs-self-hosted.md
+  - Data Sources:
+      - Overview: data-sources/overview.md
+      - Shopify: data-sources/shopify.md
+      - ShipHero: data-sources/shiphero.md
+      - Loop Returns: data-sources/loop-returns.md
+      - Swym: data-sources/swym.md
+      - Klaviyo: data-sources/klaviyo.md
+  - Data Modeling:
+      - Overview: data-modeling/overview.md
+      - Staging: data-modeling/staging.md
+      - Intermediate: data-modeling/intermediate.md
+      - Marts: data-modeling/marts.md
+  - Services & Tools:
+      - Overview: services/overview.md
+      - dbt: services/dbt.md
+      - dlt: services/dlt.md
+      - BigQuery: services/bigquery.md
+      - Cloud Run Jobs: services/cloud-run-jobs.md
+      - Cloud Scheduler: services/cloud-scheduler.md
+      - Secret Manager: services/secret-manager.md
+      - Artifact Registry: services/artifact-registry.md
+      - Evaluated, not chosen: services/evaluated-not-chosen.md
+  - Status & Roadmap: status.md

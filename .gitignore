@@ -6,3 +6,4 @@ logs/
 *.pyc
 .env
 ingestion/dlt/*/.dlt/secrets.toml
+site/

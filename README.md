@@ -1,14 +1,21 @@
 # mashburn-analytics
 
-Mock dbt + BigQuery project modeled after the Sid Mashburn data ecosystem.
-Built as a portfolio project and interview prep for the Data Engineer role.
+Mock dbt + BigQuery project modeled after the Sid Mashburn data ecosystem,
+plus a proposed production ingestion/modeling architecture for bringing
+that process in-house from an outsourced vendor. Started as portfolio work
+and interview prep for the Data Engineer role; now preliminary planning
+ahead of a potential offer.
+
+📖 **[Full documentation site](docs/index.md)** — architecture, data
+sources, modeling layers, service reference, and status/roadmap. Run
+locally: `pip install -r mkdocs-requirements.txt && mkdocs serve`.
 
 ## Purpose
 
 - Practice dbt on BigQuery (closing the platform gap before round 2)
 - Model the exact data sources Mashburn uses in production
 - Demonstrate analytical thinking about specialty retail / DTC / eCommerce data problems
-- Build something real to reference in technical interviews
+- Have a concrete starting point for the real in-house ingestion/modeling build-out
 
 ## Data Sources
 
