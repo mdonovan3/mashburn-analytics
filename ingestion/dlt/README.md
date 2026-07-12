@@ -64,3 +64,9 @@ dlt pipeline shopify show
 Requires a custom app on the target store (Settings → Apps and sales
 channels → Develop apps), with Admin API scopes: `read_orders`,
 `read_customers`, `read_products`, `read_locations`, `read_inventory`.
+
+## Running as a container
+
+See [`DEPLOY.md`](DEPLOY.md) for the full `Dockerfile` + `Cloud Scheduler ->
+Cloud Run Job -> BigQuery` deployment recipe (image build, secret handling,
+service accounts, scheduler wiring).

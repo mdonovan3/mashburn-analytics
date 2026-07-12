@@ -60,8 +60,13 @@ not comparison/marketing pages.
   `shopify_pipeline.py`) — orders, customers, products, product_variants,
   locations, inventory_levels, all incremental on `updated_at`. Not yet run
   end-to-end; no live store connected to this portfolio project.
+- Container + deploy recipe scaffolded: `ingestion/dlt/Dockerfile` and
+  `ingestion/dlt/DEPLOY.md` (Artifact Registry build, Secret Manager for the
+  access token, separate runtime/invoker service accounts, `gcloud scheduler
+  jobs create http` targeting the Cloud Run Jobs Admin API with OAuth).
+  Also not yet run — needs a real store/token to actually execute.
 - No dlt sources written yet for ShipHero, Loop Returns, or Swym (APIs are
-  documented, just not scaffolded).
-- No Dockerfile / Cloud Run Job config yet.
+  documented, just not scaffolded). Each would get its own image/Job/secret
+  per the "repeating this" section of DEPLOY.md.
 - Portable sales conversation would be needed to get real pricing before
   committing to option 1 vs. self-built option 3.
