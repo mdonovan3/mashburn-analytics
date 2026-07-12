@@ -1,0 +1,6 @@
+[sources.shopify]
+shop_url = "https://your-store.myshopify.com"
+
+[destination.bigquery]
+project_id = "mashburn-analytics-dev"
+location = "US"

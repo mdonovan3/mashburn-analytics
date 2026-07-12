@@ -56,6 +56,10 @@ not comparison/marketing pages.
 
 ## Open items / not yet built
 
+- Shopify dlt source scaffolded at `ingestion/dlt/` (`shopify_source.py`,
+  `shopify_pipeline.py`) — orders, customers, products, product_variants,
+  locations, inventory_levels, all incremental on `updated_at`. Not yet run
+  end-to-end; no live store connected to this portfolio project.
 - No dlt sources written yet for ShipHero, Loop Returns, or Swym (APIs are
   documented, just not scaffolded).
 - No Dockerfile / Cloud Run Job config yet.
