@@ -1580,10 +1580,10 @@
 <h1 id="architecture-overview">Architecture Overview<a class="headerlink" href="#architecture-overview" title="Permanent link">&para;</a></h1>
 <p>The project has two parallel tracks that share the same warehouse:</p>
 <ol>
-<li><strong>Mock track</strong> (:white_check_mark: implemented) — synthetic JSON data,
+<li><strong>Mock track</strong> (<img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" title=":white_check_mark:" /> implemented) — synthetic JSON data,
    generated locally and loaded straight into BigQuery, so the dbt project
    can be built and demoed without any live vendor credentials.</li>
-<li><strong>Production track</strong> (:jigsaw: scaffolded / :clipboard: planned) — real
+<li><strong>Production track</strong> (<img alt="🧩" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f9e9.svg" title=":jigsaw:" /> scaffolded / <img alt="📋" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4cb.svg" title=":clipboard:" /> planned) — real
    API pulls via dlt, containerized, triggered on a schedule — designed to
    be what actually replaces an outsourced ingestion vendor.</li>
 </ol>
@@ -1656,7 +1656,7 @@ populated a given row.</p>
 <tr>
 <td>Orchestration (Scheduler, Run Jobs, secrets)</td>
 <td><a href="../orchestration-deployment/">Orchestration &amp; Deployment</a></td>
-<td>:jigsaw: Scaffolded</td>
+<td><img alt="🧩" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f9e9.svg" title=":jigsaw:" /> Scaffolded</td>
 </tr>
 <tr>
 <td>Warehouse + dbt</td>

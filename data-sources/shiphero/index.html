@@ -844,10 +844,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#warning-field-coverage-verify-before-trusting" class="md-nav__link">
+  <a href="#field-coverage-verify-before-trusting" class="md-nav__link">
     <span class="md-ellipsis">
       
-        :warning: Field coverage — verify before trusting
+        Field coverage — verify before trusting
       
     </span>
   </a>
@@ -1553,10 +1553,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#warning-field-coverage-verify-before-trusting" class="md-nav__link">
+  <a href="#field-coverage-verify-before-trusting" class="md-nav__link">
     <span class="md-ellipsis">
       
-        :warning: Field coverage — verify before trusting
+        Field coverage — verify before trusting
       
     </span>
   </a>
@@ -1611,11 +1611,11 @@
 <tbody>
 <tr>
 <td><strong>Mock data</strong></td>
-<td>:white_check_mark: Implemented — <code>raw_shiphero</code> populated in BigQuery</td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" title=":white_check_mark:" /> Implemented — <code>raw_shiphero</code> populated in BigQuery</td>
 </tr>
 <tr>
 <td><strong>dlt source</strong></td>
-<td>:jigsaw: Scaffolded — <code>ingestion/dlt/shiphero/</code>, not yet run against a live account</td>
+<td><img alt="🧩" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f9e9.svg" title=":jigsaw:" /> Scaffolded — <code>ingestion/dlt/shiphero/</code>, not yet run against a live account</td>
 </tr>
 <tr>
 <td><strong>API style</strong></td>
@@ -1655,7 +1655,7 @@ generator, so any HTTP client works inside it.</p>
 tokens expire every 28 days. Rather than manage that as an operational
 chore, the pipeline stores a long-lived refresh token as the secret and
 calls <code>POST /auth/refresh</code> for a fresh access token on every run.</p>
-<h2 id="warning-field-coverage-verify-before-trusting">:warning: Field coverage — verify before trusting<a class="headerlink" href="#warning-field-coverage-verify-before-trusting" title="Permanent link">&para;</a></h2>
+<h2 id="field-coverage-verify-before-trusting"><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> Field coverage — verify before trusting<a class="headerlink" href="#field-coverage-verify-before-trusting" title="Permanent link">&para;</a></h2>
 <p>The GraphQL query only requests fields confirmed from ShipHero's public
 docs/examples: <code>id</code>, <code>order_id</code>, <code>warehouse_id</code>, <code>created_date</code>,
 <code>shipped_off_shiphero</code>, <code>dropshipment</code>, <code>address{...}</code>,

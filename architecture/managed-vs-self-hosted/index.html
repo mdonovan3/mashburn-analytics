@@ -1663,7 +1663,7 @@ section.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>dlt + Cloud Run Jobs</strong> :white_check_mark: chosen</td>
+<td><strong>dlt + Cloud Run Jobs</strong> <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" title=":white_check_mark:" /> chosen</td>
 <td>Self-hosted</td>
 <td>GCP compute only — a few dollars/month for daily runs of this size (Cloud Run Jobs bill per second, no idle cost)</td>
 <td>No platform fee; full control of every field/transform; same GCP project/billing/IAM as BigQuery; scales down to near-zero cost at low volume</td>
@@ -1719,7 +1719,7 @@ infrastructure cost only.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>dbt Core + Cloud Run Jobs</strong> :jigsaw: proposed</td>
+<td><strong>dbt Core + Cloud Run Jobs</strong> <img alt="🧩" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f9e9.svg" title=":jigsaw:" /> proposed</td>
 <td>Self-hosted</td>
 <td>GCP compute only — same near-zero marginal cost as the ingestion jobs, since it's the identical Cloud Scheduler → Cloud Run Job pattern already built</td>
 <td>Reuses infrastructure/patterns already in place for ingestion — one more container + one more Scheduler entry, not a new system; zero seat cost; full control over CI checks</td>
@@ -1773,7 +1773,7 @@ cross-source sequencing dependencies that outgrow "run dbt after ingestion,
 offset by N minutes" (that's the trigger to revisit a full orchestrator —
 see the same threshold discussed for ingestion).</p>
 <h2 id="status-of-this-page">Status of this page<a class="headerlink" href="#status-of-this-page" title="Permanent link">&para;</a></h2>
-<p>:jigsaw: This is a proposal — no dbt-on-Cloud-Run-Jobs container has been
+<p><img alt="🧩" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f9e9.svg" title=":jigsaw:" /> This is a proposal — no dbt-on-Cloud-Run-Jobs container has been
 built yet (only the ingestion containers exist so far, see
 <a href="../ingestion/">Ingestion Layer</a>). Tracked in
 <a href="../../status/">Status &amp; Roadmap</a>.</p>

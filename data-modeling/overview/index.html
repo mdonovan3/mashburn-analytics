@@ -1595,22 +1595,22 @@ different claims here.</p>
 <tbody>
 <tr>
 <td>Sources (<code>sources.yml</code>)</td>
-<td>:white_check_mark: Implemented — all 25 raw tables across 5 sources documented, with <code>unique</code>/<code>not_null</code> tests on primary keys</td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" title=":white_check_mark:" /> Implemented — all 25 raw tables across 5 sources documented, with <code>unique</code>/<code>not_null</code> tests on primary keys</td>
 <td>N/A — this is the raw layer</td>
 </tr>
 <tr>
 <td>Staging</td>
-<td>:white_check_mark: Folder structure + <code>schema.yml</code> per source :material-arrow-right: :clipboard: <strong>SQL is <code>SELECT 1 AS stub</code></strong> in every model</td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" title=":white_check_mark:" /> Folder structure + <code>schema.yml</code> per source <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span> <img alt="📋" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4cb.svg" title=":clipboard:" /> <strong>SQL is <code>SELECT 1 AS stub</code></strong> in every model</td>
 <td>Planned — detailed <code>-- TODO</code> comments specify the exact rename/cast/derive logic per model, not written yet</td>
 </tr>
 <tr>
 <td>Intermediate</td>
-<td>:white_check_mark: Folder structure, <code>ephemeral</code> materialization configured :material-arrow-right: :clipboard: <strong>SQL is a bare passthrough</strong> (<code>SELECT * FROM {{ ref(...) }}</code>)</td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" title=":white_check_mark:" /> Folder structure, <code>ephemeral</code> materialization configured <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span> <img alt="📋" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4cb.svg" title=":clipboard:" /> <strong>SQL is a bare passthrough</strong> (<code>SELECT * FROM {{ ref(...) }}</code>)</td>
 <td>Planned — TODO comments specify the joins</td>
 </tr>
 <tr>
 <td>Marts</td>
-<td>:white_check_mark: Folder structure, domain schemas configured (<code>customer</code>/<code>product</code>/<code>channel</code>/<code>returns</code>) :material-arrow-right: :clipboard: <strong>SQL is <code>SELECT 1 AS stub</code></strong></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" title=":white_check_mark:" /> Folder structure, domain schemas configured (<code>customer</code>/<code>product</code>/<code>channel</code>/<code>returns</code>) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span> <img alt="📋" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4cb.svg" title=":clipboard:" /> <strong>SQL is <code>SELECT 1 AS stub</code></strong></td>
 <td>Planned — TODO comments specify every output column and the business question each mart answers</td>
 </tr>
 </tbody>
