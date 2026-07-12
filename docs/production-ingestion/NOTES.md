@@ -45,9 +45,13 @@ not comparison/marketing pages.
   no R client, so R would mean hand-rolling API calls + `bigrquery` loads —
   not worth it here since dlt already does this in Python.
 - **Cloud Scheduler** is just the cron trigger (HTTP/Pub/Sub/App Engine
-  targets) — it doesn't run code itself. Fires an authenticated HTTP request
-  (OIDC) at the Cloud Run Job on a schedule.
-- Flow: `Cloud Scheduler (cron) → HTTP+OIDC → Cloud Run Job (Python/dlt) → BigQuery`
+  targets) — it doesn't run code itself. For Cloud Run Jobs specifically it
+  calls the Cloud Run Admin API's `jobs:run` method (an OAuth-authenticated
+  call to a `*.googleapis.com` endpoint, not OIDC — OIDC is for triggering
+  your own HTTP endpoints, e.g. a Cloud Run *Service*). That API call starts
+  a fresh Execution: a new container pulled from the image, run once,
+  destroyed on exit — no warm/idle instance between runs.
+- Flow: `Cloud Scheduler (cron) → OAuth → Cloud Run Admin API (jobs:run) → new container Execution (Python/dlt) → BigQuery`
 - Why not a full orchestrator (Airflow/Dagster/Composer): overkill for 4
   independent, non-interdependent source pulls. That machinery earns its
   cost at dozens+ of interdependent jobs. Tradeoff: no managed
@@ -56,17 +60,27 @@ not comparison/marketing pages.
 
 ## Open items / not yet built
 
-- Shopify dlt source scaffolded at `ingestion/dlt/` (`shopify_source.py`,
-  `shopify_pipeline.py`) — orders, customers, products, product_variants,
-  locations, inventory_levels, all incremental on `updated_at`. Not yet run
-  end-to-end; no live store connected to this portfolio project.
-- Container + deploy recipe scaffolded: `ingestion/dlt/Dockerfile` and
-  `ingestion/dlt/DEPLOY.md` (Artifact Registry build, Secret Manager for the
-  access token, separate runtime/invoker service accounts, `gcloud scheduler
-  jobs create http` targeting the Cloud Run Jobs Admin API with OAuth).
-  Also not yet run — needs a real store/token to actually execute.
-- No dlt sources written yet for ShipHero, Loop Returns, or Swym (APIs are
-  documented, just not scaffolded). Each would get its own image/Job/secret
-  per the "repeating this" section of DEPLOY.md.
+- Shopify dlt source scaffolded at `ingestion/dlt/shopify/` — orders,
+  customers, products, product_variants, locations, inventory_levels, all
+  incremental on `updated_at`. Not yet run end-to-end; no live store
+  connected to this portfolio project.
+- ShipHero dlt source scaffolded at `ingestion/dlt/shiphero/` —
+  `shipments` resource against ShipHero's GraphQL API (not REST — uses a
+  hand-rolled `requests`-based resource since dlt's REST API helper doesn't
+  fit GraphQL, plus a refresh-token exchange since ShipHero access tokens
+  expire every 28 days). Only the fields confirmed from ShipHero's public
+  docs/examples are queried; the extra boolean flags in the mock schema
+  (`delivered`/`completed`/`picked_up`/`needs_refund`/`refunded`) and
+  `shipping_labels.tracking_url`/`.status` are NOT confirmed to exist on the
+  real API — check the schema browser at developer.shiphero.com/schema
+  before trusting those. Not yet run end-to-end.
+- Container + deploy recipe scaffolded and generalized across sources:
+  `ingestion/dlt/DEPLOY.md` (Artifact Registry build, Secret Manager per
+  source, separate runtime service accounts + one shared invoker account,
+  `gcloud scheduler jobs create http` targeting the Cloud Run Jobs Admin API
+  with OAuth). Also not yet run — needs real credentials to actually execute.
+- No dlt sources written yet for Loop Returns or Swym (APIs are documented,
+  just not scaffolded). Each would get its own image/Job/secret per the
+  "repeating this" section of DEPLOY.md.
 - Portable sales conversation would be needed to get real pricing before
   committing to option 1 vs. self-built option 3.

@@ -1,72 +1,28 @@
-# Shopify dlt Pipeline (production-style scaffold)
+# dlt Pipelines (production-style scaffold)
 
 Scaffolds the "real" ingestion path described in
 [`docs/production-ingestion/NOTES.md`](../../docs/production-ingestion/NOTES.md):
-dlt extracts from the Shopify Admin REST API and loads straight to BigQuery,
-with incremental state and schema evolution handled by dlt instead of the
+dlt extracts from each source's API and loads straight to BigQuery, with
+incremental state and schema evolution handled by dlt instead of the
 hand-rolled batch loader in `ingestion/load_to_bigquery.py`.
 
 This is additive — the mock ingestion scripts one level up are unaffected
-and remain the way to populate `raw_shopify` for local dbt development
-without a live store.
+and remain the way to populate `raw_*` datasets for local dbt development
+without live source connections.
 
-**Status: scaffolded, not yet run end-to-end.** This portfolio project has
-no live Shopify store connected, so this hasn't been executed against real
-data. The REST API config follows dlt's documented `rest_api_source`
-patterns (declarative resources, incremental cursor params, parent/child
-`resolve` binding, Link-header pagination) — validate against a real store
-+ token before relying on it, since dlt's API surface does shift between
-versions.
+Each source is its own subfolder, its own image, and (per `DEPLOY.md`) its
+own Cloud Run Job — kept independent so one source's API outage or schema
+change doesn't block the others.
 
-## Resources
-
-Matches the tables already modeled in `ingestion/schemas.py`:
-
-| Resource | Shopify endpoint | Incremental on |
+| Source | Folder | Status |
 |---|---|---|
-| `orders` | `orders.json` | `updated_at` |
-| `customers` | `customers.json` | `updated_at` |
-| `products` | `products.json` | `updated_at` |
-| `product_variants` | nested in `products.json` (no standalone endpoint) | via parent `products` |
-| `locations` | `locations.json` | full refresh (small table) |
-| `inventory_levels` | `inventory_levels.json`, one call per location | `updated_at` |
-
-## Setup
-
-```bash
-cd ingestion/dlt
-pip install -r requirements.txt
-
-cp .dlt/secrets.toml.example .dlt/secrets.toml
-# edit .dlt/secrets.toml — add a real Shopify Admin API access token
-
-# edit .dlt/config.toml — set shop_url to the real store domain
-```
-
-BigQuery auth reuses this project's Application Default Credentials (same
-as `CONNECTION.md`) — no service account file needed if
-`gcloud auth application-default login` has already been run.
-
-## Run
-
-```bash
-python shopify_pipeline.py
-```
-
-Then inspect the run:
-
-```bash
-dlt pipeline shopify show
-```
-
-## Getting a Shopify Admin API access token
-
-Requires a custom app on the target store (Settings → Apps and sales
-channels → Develop apps), with Admin API scopes: `read_orders`,
-`read_customers`, `read_products`, `read_locations`, `read_inventory`.
+| Shopify | [`shopify/`](shopify/README.md) | Scaffolded, not yet run end-to-end |
+| ShipHero | [`shiphero/`](shiphero/README.md) | Scaffolded, not yet run end-to-end |
+| Loop Returns | not started | — |
+| Swym | not started | — |
 
 ## Running as a container
 
-See [`DEPLOY.md`](DEPLOY.md) for the full `Dockerfile` + `Cloud Scheduler ->
-Cloud Run Job -> BigQuery` deployment recipe (image build, secret handling,
-service accounts, scheduler wiring).
+See [`DEPLOY.md`](DEPLOY.md) for the shared `Dockerfile` + `Cloud Scheduler
+-> Cloud Run Job -> BigQuery` deployment recipe — same steps for every
+source, just swap the folder/image/secret name.

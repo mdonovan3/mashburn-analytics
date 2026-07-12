@@ -5,4 +5,4 @@ dbt_packages/
 logs/
 *.pyc
 .env
-ingestion/dlt/.dlt/secrets.toml
+ingestion/dlt/*/.dlt/secrets.toml

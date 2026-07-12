@@ -1,0 +1,3 @@
+[destination.bigquery]
+project_id = "mashburn-analytics-dev"
+location = "US"
