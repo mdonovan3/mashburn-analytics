@@ -65,6 +65,10 @@ flowchart TB
     RAW --> STG --> INT --> MART --> BI
 ```
 
+See the [Full System Diagram](system-diagram.md) for the same picture
+expanded to every raw table and every dbt model, with hover tooltips and
+click-through links.
+
 ## Layer detail pages
 
 | Layer | Page | Status |

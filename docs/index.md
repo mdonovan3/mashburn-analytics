@@ -69,7 +69,8 @@ flowchart LR
 
 Solid arrows are working today; dashed arrows are designed but not yet
 executed. See [Architecture Overview](architecture/overview.md) for the
-layer-by-layer breakdown.
+layer-by-layer breakdown, or the [Full System Diagram](architecture/system-diagram.md)
+for every table and model name, hover tooltips, and links into per-source/per-model detail.
 
 ## Quick orientation
 
