@@ -947,6 +947,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#api-shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API shape
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#status-note" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1550,6 +1561,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#api-shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API shape
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#status-note" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1604,11 +1626,19 @@ done for the other four sources.</p>
 </tr>
 <tr>
 <td><strong>dlt source</strong></td>
-<td><img alt="📋" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4cb.svg" title=":clipboard:" /> Planned — not started, not yet researched</td>
+<td><img alt="📋" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4cb.svg" title=":clipboard:" /> Planned — not started</td>
 </tr>
 <tr>
 <td><strong>API style</strong></td>
-<td>Not yet researched for this project</td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" title=":white_check_mark:" /> Researched — REST, cursor-based pagination (confirmed via <a href="https://developers.klaviyo.com/en/reference/api_overview">developers.klaviyo.com</a>)</td>
+</tr>
+<tr>
+<td><strong>Auth</strong></td>
+<td>Private API key via <code>Authorization: Klaviyo-API-Key &lt;key&gt;</code> header (OAuth also available for server-side apps)</td>
+</tr>
+<tr>
+<td><strong>Rate limits</strong></td>
+<td>Fixed-window (burst + short-window, plus a longer steady-state window), enforced per account — private-key integrations <strong>share one quota across the whole account</strong>, so this and any other Klaviyo integration in use would compete for the same limit; HTTP 429 on exceeding</td>
 </tr>
 <tr>
 <td><strong>Managed connector coverage</strong></td>
@@ -1640,20 +1670,33 @@ done for the other four sources.</p>
 </table>
 <p>Feeds the "what revenue is attributable to email campaigns vs. flows"
 business question, joined against Shopify order data.</p>
+<h2 id="api-shape">API shape<a class="headerlink" href="#api-shape" title="Permanent link">&para;</a></h2>
+<p>Klaviyo's real Events API is confirmed to require a profile identifier
+(<code>id</code>/<code>email</code>/<code>phone_number</code>) on every event — already established in
+<a href="../../architecture/customer-identity/">Customer Identity &amp; Conversion Tracking</a>,
+which is what makes the <code>customer_email</code> join to Shopify orders sound. On
+top of that, the REST/API-key/cursor-pagination shape means the dlt source
+here can follow the same declarative <code>rest_api_source</code> pattern as Shopify
+— no GraphQL, no refresh-token dance like ShipHero. The one design point
+worth resolving before scaffolding is the shared per-account rate limit:
+if Mashburn runs other Klaviyo-connected tools alongside this pipeline,
+they'd all draw from the same quota, so the sync schedule/page size may
+need tuning to avoid 429s rather than just maxing out request concurrency.</p>
 <h2 id="status-note">Status note<a class="headerlink" href="#status-note" title="Permanent link">&para;</a></h2>
-<p>Klaviyo is the least-developed source in this project — it exists in the
-mock data and dbt source declarations because it was assumed to round out
-a realistic picture of the marketing stack, but unlike the other four
-sources it hasn't gone through the same verification pass. A page-source
-check of shopmashburn.com (the same pass that confirmed Swym and turned up
-the <code>returns.shopmashburn.com</code> portal) didn't surface a Klaviyo tracking
-pixel or script — but that's a weak negative signal, not real evidence of
-absence: marketing pixels load via JavaScript and generally don't show up
-in a static HTML/markdown read the way a footer link does. Before
-scaffolding a dlt source for this one, confirm it's actually in use
-(checking network requests in a real browser, or asking someone at the
-company) and check its real API shape — don't assume the same
-platform/pattern choices that worked for Shopify apply here.</p>
+<p>Klaviyo is the least-developed source in this project in one specific way
+that the API research above doesn't resolve — it exists in the mock data
+and dbt source declarations because it was assumed to round out a
+realistic picture of the marketing stack, but unlike the other four
+sources it hasn't gone through the same <em>usage</em> verification pass. A
+page-source check of shopmashburn.com (the same pass that confirmed Swym
+and turned up the <code>returns.shopmashburn.com</code> portal) didn't surface a
+Klaviyo tracking pixel or script — but that's a weak negative signal, not
+real evidence of absence: marketing pixels load via JavaScript and
+generally don't show up in a static HTML/markdown read the way a footer
+link does. Before scaffolding a dlt source for this one, confirm it's
+actually in use (checking network requests in a real browser, or asking
+someone at the company) — the API shape is now known, but <em>is Klaviyo
+actually the tool in use</em> is still open.</p>
 
 
 
