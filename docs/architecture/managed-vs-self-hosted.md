@@ -33,6 +33,68 @@ ceiling.** That biases this whole page toward self-hosted options, and
 that bias is stated up front rather than hidden in the "recommendation"
 section.
 
+## Estimated data volumes
+
+!!! warning "Illustrative planning model, not real numbers"
+    Mashburn hasn't shared actual order/traffic data with this project.
+    The order-volume estimate below is grounded in two public data points —
+    third-party revenue estimates and actual observed price points from
+    shopmashburn.com — rather than a pure guess, but it's still a
+    back-of-envelope model, not a confirmed number. Stated explicitly so
+    it's easy to throw out and replace with real numbers on day one. Treat
+    the "why it matters" conclusions as more durable than the specific row
+    counts.
+
+**Order volume, derived from revenue ÷ average order value:**
+
+- **Revenue:** third-party estimates (Growjo, RocketReach — algorithmic
+  estimates for a private company, not filed financials) put combined
+  Sid + Ann Mashburn revenue at **$28M–$44M/year**.
+- **Average order value (AOV):** built from actual prices pulled off the
+  site — silk ties $155, dress socks $15, ready-to-wear sport coats
+  $950–$1,695, made-to-measure suits from $2,295. A single-item accessory
+  order sits well under $200; a jacket or suit order alone clears
+  $1,000+. Blended across a catalog with that spread (and skewed toward
+  the more frequently-bought lower end — shirts, ties, accessories —
+  rather than suits), **$250–$400** is a reasonable estimated AOV for a
+  specialty menswear/womenswear retailer at this price tier.
+- **Orders/year = revenue ÷ AOV:** $28M / $400 ≈ **70,000** at the low end,
+  $44M / $250 ≈ **175,000** at the high end → **~192–480 orders/day**,
+  call it **~300/day mid-case**.
+
+This mid-case (~300 orders/day) happens to land close to an independent
+foot-traffic-based guess (~15 stores × modest daily transactions +
+e-commerce) made earlier in this project's research — two different
+methods landing in the same neighborhood is a reasonable sanity check,
+though both ultimately rest on third-party/estimated inputs rather than
+confirmed figures.
+
+| Table | Source | Est. rows/day (mid-case) | Est. rows/month | Basis |
+|---|---|---|---|---|
+| `orders` | Shopify | ~300 | ~9K | revenue ÷ AOV, derived above |
+| `order_line_items` | Shopify | ~750 | ~22K | ~2.5 items/order |
+| `customers` (new+updated) | Shopify | ~150 | ~4.5K | new signups + profile/order-count updates |
+| `products` / `product_variants` (changed) | Shopify | ~50 / ~150 | ~1.5K / ~4.5K | catalog is ~2K products confirmed via sitemap; low daily churn |
+| `inventory_levels` (changed) | Shopify | ~1,000–2,000 | ~35K | variants × ~16 locations is a large cross-product; every sale/restock touches a row — likely the largest Shopify contributor |
+| `shipments` / `shipping_labels` | ShipHero | ~300 each | ~9K each | ~1 per order |
+| `return_requests` / `return_line_items` | Loop | ~50–75 / ~90 | ~2K / ~2.5K | apparel return rates typically run 15–25% |
+| `wishlist_events` | Swym | ~600–1,200 | ~27K | wishlist adds outpace purchases (higher-funnel action) |
+| `waitlist_signups` | Swym | ~30 | ~1K | back-in-stock signups, smaller subset |
+| `email_events` | Klaviyo | ~5,000–20,000 | **~350K** | sends+opens+clicks across a subscriber list — reliably the largest volume source in any retail data stack, usually by 5–10x over the next-largest table |
+| `campaigns` | Klaviyo | <5 | negligible | — |
+
+**Rough total: ~0.3–0.6M rows/month across all 5 sources combined**,
+overwhelmingly dominated by Klaviyo email events (~70-75% of the total).
+Everything else — the sources this project has actually scaffolded so far
+(Shopify, ShipHero) — is a small fraction of that.
+
+**Why this number matters:** Fivetran's $500/million-MAR pricing with a
+$12,000/year minimum effectively pre-pays for **2M rows/month**. Even the
+high end of this estimate (~0.6M/month) is well under a third of what
+that floor already covers — a concrete version of the "the floor alone
+likely exceeds what's needed" claim made throughout this page, not just an
+assertion.
+
 ## Ingestion: managed platform vs. self-hosted (dlt)
 
 | Option | Type | Approx. cost at this scale | Pros | Cons |
@@ -51,6 +113,17 @@ custom-build cost is fixed regardless of vendor choice. Given that, paying
 a platform fee on top buys relatively little at this data volume. dlt gets
 the same outcome (data in BigQuery, on schedule, incrementally) for
 infrastructure cost only.
+
+### What volume range justifies each option
+
+| Option | Volume where it's actually justified | Why |
+|---|---|---|
+| **dlt + Cloud Run Jobs** | No meaningful lower bound — works fine even smaller than this. Scales up to tens of millions of rows/month on a single container before you'd need to think about parallelization | Compute-priced, not row-priced. The eventual ceiling is Cloud Run's per-task timeout (up to 7 days) and single-container throughput, not cost — a ceiling this project is nowhere near |
+| **Fivetran** | Starts making economic sense once real usage approaches/exceeds ~2M rows/month (what the $12K/yr floor already covers), *or* regardless of volume once there's truly zero in-house engineering bandwidth for connector upkeep | Mashburn's estimated ~0.3–0.6M rows/month is a fraction of the floor — paying mostly for coverage/reliability/support, not for capacity actually used |
+| **Airbyte Cloud** | Cost-competitive against Fivetran roughly in the tens-of-millions-of-rows/month range, per the public contract-value comparison cited above | Below that range, usage-based credits don't obviously beat self-hosted OSS or dlt on cost — the free lunch is at the high end, not the low end |
+| **Airbyte self-hosted OSS** | Same "works at any volume" profile as dlt, since it's also compute-priced | The real gap for this project isn't volume, it's the missing native ShipHero connector |
+| **Portable.io** | Flat-rate pricing makes it specifically attractive at **low volume with several niche connectors needed** — exactly this project's shape | Could look relatively worse at very high volume, where a per-row platform's marginal cost might undercut a flat fee — not a problem at Mashburn's scale |
+| **Hevo** | Similar reasoning to Fivetran, but a lower cost floor (~$239–299/mo) — better fit than Fivetran at small scale, still pricier than self-hosted here | Event-based tiers still mean paying for headroom this project's volume doesn't use |
 
 ## dbt run process: dbt Cloud vs. self-hosted dbt Core
 

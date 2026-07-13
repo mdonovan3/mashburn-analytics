@@ -41,3 +41,12 @@ email, since Swym doesn't carry a Shopify order id to join on directly).
 That's real analytical design, not a mechanical rename — worth flagging as
 the piece most likely to need iteration once written against real data
 rather than mock data with clean, unambiguous timestamps.
+
+## Customer identity for conversion tracking
+
+`int_wishlist_to_purchase`'s "did they actually buy" join depends on
+reliably connecting a Swym wishlist event back to a Shopify order — which
+looked like a real gap (the mock schema has no email field on wishlist
+events) until checked against Swym's actual API docs. Full writeup,
+including the Klaviyo conversion-tracking angle and why a dedicated CDP
+isn't the answer: [Customer Identity & Conversion Tracking](../architecture/customer-identity.md).

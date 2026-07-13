@@ -60,6 +60,7 @@ nav:
       - Orchestration & Deployment: architecture/orchestration-deployment.md
       - Warehouse & Modeling: architecture/warehouse-modeling.md
       - Managed vs. Self-Hosted: architecture/managed-vs-self-hosted.md
+      - Customer Identity & Conversion Tracking: architecture/customer-identity.md
   - Data Sources:
       - Overview: data-sources/overview.md
       - Shopify: data-sources/shopify.md

@@ -28,6 +28,17 @@ what makes the "wishlist-to-purchase conversion" and "back-in-stock
 performance" business questions answerable at all (see
 [`int_wishlist_to_purchase`](../data-modeling/intermediate.md)).
 
+## :warning: Mock schema gap — missing email field
+
+`wishlist_events` as mocked here has no customer identifier at all (only
+`di`, a device id) — but Swym's real webhooks
+([confirmed via their developer docs](https://developers.getswym.com/docs/wishlist-add))
+include a `User` object with `Medium: "email"` / `MediumValue` (the actual
+email address) on every event. The mock schema undersold what the real API
+provides. Before building the real dlt source, add an email field here too
+— see [Customer Identity & Conversion Tracking](../architecture/customer-identity.md)
+for the full writeup.
+
 ## Why this is the hardest source to bring in-house
 
 Swym has no connector on any evaluated managed platform — confirmed via
