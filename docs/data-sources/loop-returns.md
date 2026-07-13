@@ -16,7 +16,8 @@ branding/API calls, which hasn't been done yet.
 |---|---|
 | **Mock data** | :white_check_mark: Implemented — `raw_loop` populated in BigQuery |
 | **dlt source** | :clipboard: Planned — not started |
-| **API style** | Not yet researched for this project |
+| **API style** | :white_check_mark: Researched — REST, JSON, standard HTTP (confirmed via [docs.loopreturns.com](https://docs.loopreturns.com/api-reference/authentication)) — assuming the platform actually is Loop, see caveat above |
+| **Auth** | API key via `X-Authorization` header, scoped per key (Cart/Return/Order/Report/Developer Tools/Destinations). OAuth 2.0 only required for the separate Label API and Webhooks API |
 | **Managed connector coverage** | Native on Fivetran, Portable (for Loop specifically — moot if the real platform turns out to be a competitor) |
 
 ## Tables
@@ -30,14 +31,27 @@ branding/API calls, which hasn't been done yet.
 for the "what % of returns become exchanges vs. cash refunds" business
 question — exchanges keep revenue, refunds don't.
 
+## API shape, if the platform is confirmed to be Loop
+
+Good news for the dlt build: Loop's real API is REST with a simple static
+API-key header — the same shape as Shopify, not the GraphQL/refresh-token
+pattern ShipHero required. A declarative `rest_api_source` config (like
+`shopify_source.py`) should fit cleanly, no custom `requests`-based
+resource needed. Webhooks are also available (Loop supports a
+webhooks-management API), which is worth a second look later as an
+alternative to polling — a scheduled Cloud Run Job pulling on a cron is
+still the simpler starting point and consistent with every other source
+in this project, but Loop specifically has the option if latency ever
+matters.
+
 ## What's next before building the dlt source
 
 1. **Confirm the actual returns platform** — visit `returns.shopmashburn.com`
    and check its page source/footer branding to verify it's Loop and not a
    competitor (Return Prime, AfterShip Returns, Narvar all use the same
-   subdomain-portal pattern).
-2. Then research that platform's API style (REST vs. GraphQL), auth model,
-   and rate limits — don't assume it's REST just because Shopify was;
-   ShipHero's GraphQL surprise is the reason to check first rather than
-   guess.
-3. Only then scaffold `ingestion/dlt/loop-returns/`.
+   subdomain-portal pattern). This is the one thing genuinely still
+   unverified — the API research above assumes it checks out as Loop.
+2. Generate a scoped API key (Return + Order read scopes should cover the
+   two tables modeled here) and confirm the exact endpoint paths/response
+   shapes against `docs.loopreturns.com` before writing the dlt config.
+3. Then scaffold `ingestion/dlt/loop-returns/`.

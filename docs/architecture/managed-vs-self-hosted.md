@@ -97,6 +97,68 @@ README also mentions `inventory_movements` and `returns` as conceptually
 part of ShipHero's WMS data, but neither is modeled here, so there's no
 volume estimate for them.
 
+### Klaviyo subscriber list size — two methods, and why they disagree
+
+The `email_events` estimate above was built bottoms-up (assumed sends per
+campaign × campaign frequency). Worth cross-checking top-down from list
+size, the way the order-volume estimate was cross-checked against
+foot-traffic earlier — and here the two methods diverge sharply, which is
+itself the useful finding.
+
+- **Top-down attempt:** total distinct customers/year (mid-case ~300
+  orders/day ÷ ~1.4 orders per customer per year ≈ **~78,000 unique
+  purchasers/year**). Email subscriber lists typically run 2–4x annual
+  purchaser count (people who sign up for a discount code without buying,
+  browsers, etc.) → **~150,000–300,000 subscribers**, plausibly. Send that
+  list 2–3 campaigns/week at a ~20% open / ~3% click rate, and campaign
+  events alone land in the **~100,000–160,000 rows/day** range — 5–30x
+  higher than the bottoms-up ~5,000–20,000/day estimate used above.
+- **Why they disagree this much:** the gap is almost entirely sensitivity
+  to two compounding assumptions — subscriber-list-size multiplier (2–4x
+  is a wide range on its own) and send-to-full-list frequency (real ESP
+  usage typically segments sends rather than blasting the entire list
+  every time, which the top-down method ignores and would overstate
+  volume for). Small uncertainty in either assumption swings the answer
+  by an order of magnitude.
+- **Conclusion:** Klaviyo `email_events` is, by a wide margin, **the least
+  reliable number in this whole model** — treat the ~350K/month figure
+  above as a floor, not a point estimate, and get real numbers (actual
+  list size, actual send cadence) before this source is prioritized for a
+  real dlt build. This also reinforces the Klaviyo status note on its own
+  [source page](../data-sources/klaviyo.md): usage itself isn't even
+  confirmed yet, let alone volume.
+
+### Total cumulative customer base (not just annual)
+
+Everything above estimates *rates* (rows/day, rows/month) — useful for
+ongoing sync cost, but a different question from **how much data exists
+in total**, which matters for sizing an initial backfill. Sid Mashburn
+(2007) and Ann Mashburn (2010) have been operating for roughly 16–19
+years. Naively multiplying ~78,000 annual purchasers × ~18 years wildly
+overcounts (heavy repeat-customer overlap year to year), so a more
+reasonable approach: assume the total distinct-customer file is a modest
+multiple — not a multiplication — of one year's actives, accounting for
+churn and replacement over time. **Rough estimate: ~250,000–450,000
+distinct customers total**, call it **~300K–400K mid-case**. Notably, this
+lands in the same neighborhood as the Klaviyo subscriber-list guess above
+(~150K–300K) — a mild consistency check between two independently-derived
+numbers, though both rest on the same underlying orders/AOV assumptions
+and shouldn't be treated as independent confirmation of each other.
+
+### Initial backfill size (day-one sync, not steady state)
+
+Every volume number on this page is a steady-state daily/monthly rate —
+but the *first* sync of any new ingestion pipeline pulls historical data,
+not just one day's worth. Common practice is bounding that initial pull
+(e.g. last 2–3 years) rather than syncing a company's full history by
+default. At mid-case ~110,000 orders/year, a 2-year initial Shopify
+`orders` backfill is roughly **~220,000 orders** (plus proportional
+line items, ~550,000) — a trivial one-time load for any tool evaluated on
+this page (dlt, Fivetran, Airbyte, Portable all handle this in minutes,
+not hours). Not a factor in the tooling decision at this company's scale;
+worth stating explicitly so "backfill size" isn't left as an unexamined
+unknown when a real build starts.
+
 **Why this number matters:** Fivetran's $500/million-MAR pricing with a
 $12,000/year minimum effectively pre-pays for **2M rows/month**. Even the
 high end of this estimate (~0.6M/month) is well under a third of what
