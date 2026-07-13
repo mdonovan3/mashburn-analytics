@@ -69,24 +69,33 @@ methods landing in the same neighborhood is a reasonable sanity check,
 though both ultimately rest on third-party/estimated inputs rather than
 confirmed figures.
 
-| Table | Source | Est. rows/day (mid-case) | Est. rows/month | Basis |
+| Table | Source | Est. rows/day (mid, low–high) | Est. rows/month | Basis |
 |---|---|---|---|---|
-| `orders` | Shopify | ~300 | ~9K | revenue ÷ AOV, derived above |
-| `order_line_items` | Shopify | ~750 | ~22K | ~2.5 items/order |
-| `customers` (new+updated) | Shopify | ~150 | ~4.5K | new signups + profile/order-count updates |
-| `products` / `product_variants` (changed) | Shopify | ~50 / ~150 | ~1.5K / ~4.5K | catalog is ~2K products confirmed via sitemap; low daily churn |
+| `orders` | Shopify | ~300 (192–480) | ~9K (6K–14K) | revenue ÷ AOV, derived above |
+| `order_line_items` | Shopify | ~750 (480–1,200) | ~22K (14K–36K) | ~2.5 items/order |
+| `customers` (new+updated) | Shopify | ~150 (100–240) | ~4.5K (3K–7K) | ~0.5x order volume — new signups + repeat-customer profile/order-count updates |
+| `locations` | Shopify | ~0 | negligible | ~15–16 total rows; store openings/closings are rare events, not a daily-volume source |
+| `products` (changed) | Shopify | ~50 | ~1.5K | driven by catalog refresh cadence (new arrivals, discontinued items), roughly independent of order volume |
+| `product_variants` (changed) | Shopify | ~150 | ~4.5K | ~3 variants/product on average; same low-churn logic as `products` |
 | `inventory_levels` (changed) | Shopify | ~1,000–2,000 | ~35K | variants × ~16 locations is a large cross-product; every sale/restock touches a row — likely the largest Shopify contributor |
-| `shipments` / `shipping_labels` | ShipHero | ~300 each | ~9K each | ~1 per order |
-| `return_requests` / `return_line_items` | Loop | ~50–75 / ~90 | ~2K / ~2.5K | apparel return rates typically run 15–25% |
-| `wishlist_events` | Swym | ~600–1,200 | ~27K | wishlist adds outpace purchases (higher-funnel action) |
-| `waitlist_signups` | Swym | ~30 | ~1K | back-in-stock signups, smaller subset |
+| `shipments` | ShipHero | ~330 (210–530) | ~10K (6K–16K) | ~1.1x order volume, not 1:1 — accounts for split shipments: buy-online-ship-from-store across multiple physical locations, and made-to-measure pieces (a meaningful part of this catalog — MTM suits/jackets/topcoats) which typically ship separately from any in-stock items on the same order |
+| `shipping_labels` | ShipHero | ~350 (220–560) | ~10.5K (7K–17K) | ~1.05x `shipments` — most shipments are single-box/single-label, small allowance for multi-box packages |
+| `return_requests` | Loop | ~50–75 | ~2K | apparel return rates typically run 15–25% of orders |
+| `return_line_items` | Loop | ~90 | ~2.5K | ~1.5x `return_requests` — some returns include multiple items |
+| `wishlist_events` | Swym | ~600–1,200 | ~27K | wishlist adds outpace purchases — a higher-funnel, lower-commitment action, roughly 2–3x order volume |
+| `waitlist_signups` | Swym | ~30 | ~1K | back-in-stock signups — smaller subset of wishlist activity |
 | `email_events` | Klaviyo | ~5,000–20,000 | **~350K** | sends+opens+clicks across a subscriber list — reliably the largest volume source in any retail data stack, usually by 5–10x over the next-largest table |
 | `campaigns` | Klaviyo | <5 | negligible | — |
 
-**Rough total: ~0.3–0.6M rows/month across all 5 sources combined**,
-overwhelmingly dominated by Klaviyo email events (~70-75% of the total).
-Everything else — the sources this project has actually scaffolded so far
-(Shopify, ShipHero) — is a small fraction of that.
+**Rough total: ~0.3–0.6M rows/month across all 5 sources combined**
+(mid-case sums to ≈480K), overwhelmingly dominated by Klaviyo email events
+(~70-75% of the total). Everything else — including both ShipHero tables
+combined (~20K/month mid-case) — is a small fraction of that. Note that
+`SHIPHERO_SHIPMENTS` is the only ShipHero table actually implemented in
+this project's schema (`ingestion/schemas.py`); the original project
+README also mentions `inventory_movements` and `returns` as conceptually
+part of ShipHero's WMS data, but neither is modeled here, so there's no
+volume estimate for them.
 
 **Why this number matters:** Fivetran's $500/million-MAR pricing with a
 $12,000/year minimum effectively pre-pays for **2M rows/month**. Even the
