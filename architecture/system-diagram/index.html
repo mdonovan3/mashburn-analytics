@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../cloud-run-jobs/">
+        <link rel="prev" href="../overview/">
       
       
-        <link rel="next" href="../secret-manager/">
+        <link rel="next" href="../ingestion/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Cloud Scheduler - Mashburn Analytics — Ecosystem Docs</title>
+        <title>Full System Diagram - Mashburn Analytics — Ecosystem Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cloud-scheduler" class="md-skip">
+        <a href="#full-system-diagram" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cloud Scheduler
+              Full System Diagram
             
           </span>
         </div>
@@ -240,11 +240,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../architecture/overview/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
           
   
   
@@ -306,13 +308,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../overview/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../services/overview/" class="md-tabs__link">
           
   
   
@@ -421,8 +421,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -444,19 +446,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -474,7 +479,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -492,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
@@ -517,10 +522,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../architecture/system-diagram/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full System Diagram
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -536,6 +568,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#whole-system-source-api-to-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Whole system, source API to BI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zoom-in-the-full-dbt-dag-model-by-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zoom in: the full dbt DAG, model by model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-detail-elsewhere-on-this-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        More detail elsewhere on this site
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -548,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/ingestion/" class="md-nav__link">
+      <a href="../ingestion/" class="md-nav__link">
         
   
   
@@ -576,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/orchestration-deployment/" class="md-nav__link">
+      <a href="../orchestration-deployment/" class="md-nav__link">
         
   
   
@@ -604,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/warehouse-modeling/" class="md-nav__link">
+      <a href="../warehouse-modeling/" class="md-nav__link">
         
   
   
@@ -632,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/managed-vs-self-hosted/" class="md-nav__link">
+      <a href="../managed-vs-self-hosted/" class="md-nav__link">
         
   
   
@@ -660,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/customer-identity/" class="md-nav__link">
+      <a href="../customer-identity/" class="md-nav__link">
         
   
   
@@ -1114,10 +1199,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1143,22 +1226,19 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -1176,7 +1256,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1194,7 +1274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+      <a href="../../services/overview/" class="md-nav__link">
         
   
   
@@ -1222,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dbt/" class="md-nav__link">
+      <a href="../../services/dbt/" class="md-nav__link">
         
   
   
@@ -1250,7 +1330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dlt/" class="md-nav__link">
+      <a href="../../services/dlt/" class="md-nav__link">
         
   
   
@@ -1278,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bigquery/" class="md-nav__link">
+      <a href="../../services/bigquery/" class="md-nav__link">
         
   
   
@@ -1306,7 +1386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cloud-run-jobs/" class="md-nav__link">
+      <a href="../../services/cloud-run-jobs/" class="md-nav__link">
         
   
   
@@ -1331,19 +1411,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../services/cloud-scheduler/" class="md-nav__link">
         
   
   
@@ -1359,7 +1430,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1372,7 +1442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../secret-manager/" class="md-nav__link">
+      <a href="../../services/secret-manager/" class="md-nav__link">
         
   
   
@@ -1400,7 +1470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../artifact-registry/" class="md-nav__link">
+      <a href="../../services/artifact-registry/" class="md-nav__link">
         
   
   
@@ -1428,7 +1498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../evaluated-not-chosen/" class="md-nav__link">
+      <a href="../../services/evaluated-not-chosen/" class="md-nav__link">
         
   
   
@@ -1503,6 +1573,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#whole-system-source-api-to-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Whole system, source API to BI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zoom-in-the-full-dbt-dag-model-by-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zoom in: the full dbt DAG, model by model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-detail-elsewhere-on-this-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        More detail elsewhere on this site
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1518,7 +1629,7 @@
 
 
   
-    <a href="https://github.com/mdonovan3/mashburn-analytics/edit/main/docs/services/cloud-scheduler.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/mdonovan3/mashburn-analytics/edit/main/docs/architecture/system-diagram.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1526,31 +1637,316 @@
   
 
 
-<h1 id="cloud-scheduler">Cloud Scheduler<a class="headerlink" href="#cloud-scheduler" title="Permanent link">&para;</a></h1>
-<p><strong>What it is:</strong> Google Cloud's fully managed cron service. It doesn't run
-any code itself — it just fires on a schedule (standard cron syntax) and
-hits one of three target types: HTTP/S, Pub/Sub, or App Engine.</p>
-<p><strong>How it triggers a Cloud Run Job (the pattern used here):</strong> Cloud Run Jobs
-don't expose a plain HTTP endpoint the way a Cloud Run <em>Service</em> does —
-they're started via the <strong>Cloud Run Admin API</strong>'s <code>jobs:run</code> method. So the
-Scheduler target is an HTTP call to
-<code>https://{region}-run.googleapis.com/.../jobs/{job}:run</code>, authenticated
-with an <strong>OAuth</strong> token (not OIDC — OIDC is for calling your own HTTP
-endpoints; Google's own <code>*.googleapis.com</code> APIs expect OAuth). That call
-just tells the Admin API to start a new Execution; Scheduler's job is done
-once the API acknowledges the request.</p>
-<div class="highlight"><pre><span></span><code>gcloud<span class="w"> </span>scheduler<span class="w"> </span><span class="nb">jobs</span><span class="w"> </span>create<span class="w"> </span>http<span class="w"> </span>shopify-dlt-daily<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--schedule<span class="o">=</span><span class="s2">&quot;0 6 * * *&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--uri<span class="o">=</span><span class="s2">&quot;https://us-central1-run.googleapis.com/apps/v1/namespaces/PROJECT/jobs/shopify-dlt:run&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--http-method<span class="o">=</span>POST<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--oauth-service-account-email<span class="o">=</span>INVOKER_SA
-</code></pre></div>
-<p><strong>Identity:</strong> a dedicated "invoker" service account with only
-<code>roles/run.developer</code> — enough to start a Job, nothing else. Kept separate
-from the Job's own runtime service account (which has BigQuery + secret
-access) — Scheduler can start work, it can't do the work itself.</p>
-<p><strong>Status:</strong> <img alt="🧩" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f9e9.svg" title=":jigsaw:" /> designed (<code>ingestion/dlt/DEPLOY.md</code> has the full
-command), no Scheduler job actually created yet.</p>
+<h1 id="full-system-diagram">Full System Diagram<a class="headerlink" href="#full-system-diagram" title="Permanent link">&para;</a></h1>
+<p>One page, two diagrams, both bigger and more granular than the summary
+pictures on <a href="../../">Home</a> and <a href="../overview/">Architecture Overview</a> —
+those show layers; these show the actual tables and model names inside each
+layer. Hover any node for a one-line description; click it to jump to the
+page that covers it in depth.</p>
+<p>Status legend is the same one used <a href="../../#status-legend">everywhere else on this
+site</a>: ✅ Implemented · 🧩 Scaffolded · 📋 Planned.</p>
+<h2 id="whole-system-source-api-to-bi">Whole system, source API to BI<a class="headerlink" href="#whole-system-source-api-to-bi" title="Permanent link">&para;</a></h2>
+<p>Every raw table for every source, both ingestion paths (mock + dlt), the
+orchestration pieces that will run dlt in production, all five <code>raw_*</code>
+datasets, staging/intermediate grouped by source, and all seven marts
+grouped by business domain.</p>
+<pre class="mermaid"><code>flowchart TB
+    subgraph SRC["① Source APIs"]
+        direction LR
+        subgraph SRC_SHOP["Shopify — REST"]
+            SHOP_ORD[orders]
+            SHOP_CUST[customers]
+            SHOP_PROD[products]
+            SHOP_VAR[product_variants]
+            SHOP_INV[inventory_levels]
+            SHOP_LOC[locations]
+        end
+        subgraph SRC_SHIP["ShipHero — GraphQL"]
+            SHIP_SHIP["shipments\n(+ nested shipping_labels)"]
+        end
+        subgraph SRC_LOOP["Loop Returns — REST, unconfirmed platform"]
+            LOOP_REQ[return_requests]
+            LOOP_LI[return_line_items]
+        end
+        subgraph SRC_SWYM["Swym — confirmed live, API unresearched"]
+            SWYM_WISH[wishlist_events]
+            SWYM_WAIT[waitlist_signups]
+        end
+        subgraph SRC_KLAV["Klaviyo — REST, usage unconfirmed"]
+            KLAV_EVT[email_events]
+            KLAV_CAMP[campaigns]
+        end
+    end
+
+    subgraph ING["② Ingestion"]
+        direction LR
+        MOCKGEN["✅ Mock generators\ngenerate_seed.py / generate_daily.py"]
+        DLT_SHOP["🧩 shopify_source.py\nrest_api_source"]
+        DLT_SHIP["🧩 shiphero_source.py\ncustom GraphQL resource"]
+        DLT_LOOP["📋 Loop dlt source\nnot started"]
+        DLT_SWYM["📋 Swym dlt source\nnot started"]
+        DLT_KLAV["📋 Klaviyo dlt source\nnot researched"]
+    end
+
+    subgraph ORCH["③ Orchestration — 🧩 scaffolded, undeployed"]
+        direction LR
+        SCHED[Cloud Scheduler]
+        CRJ[Cloud Run Jobs]
+        SM[Secret Manager]
+        AR[Artifact Registry]
+    end
+
+    subgraph RAW["④ BigQuery raw_* datasets — ✅ populated via mock path"]
+        direction LR
+        RAW_SHOP[("raw_shopify")]
+        RAW_SHIP[("raw_shiphero")]
+        RAW_LOOP[("raw_loop")]
+        RAW_SWYM[("raw_swym")]
+        RAW_KLAV[("raw_klaviyo")]
+    end
+
+    subgraph STG["⑤ dbt staging — views, 📋 15 models, all stubbed"]
+        direction LR
+        STG_SHOP["stg_shopify__* (7)"]
+        STG_SHIP["stg_shiphero__* (2)"]
+        STG_LOOP["stg_loop__* (2)"]
+        STG_SWYM["stg_swym__* (2)"]
+        STG_KLAV["stg_klaviyo__* (2)"]
+    end
+
+    subgraph INT["⑥ dbt intermediate — ephemeral, 📋 5 models, all stubbed"]
+        direction LR
+        I1[int_orders_enriched]
+        I2[int_order_items_enriched]
+        I3[int_customer_order_history]
+        I4[int_return_metrics]
+        I5[int_wishlist_to_purchase]
+    end
+
+    subgraph MART["⑦ dbt marts — tables, 📋 7 models, all stubbed"]
+        direction LR
+        subgraph M_CUST[customer]
+            M1[customer_ltv]
+            M2[customer_retention_cohorts]
+        end
+        subgraph M_PROD[product]
+            M3[product_performance]
+            M4[return_rates_by_sku]
+        end
+        subgraph M_CHAN[channel]
+            M5[channel_revenue_split]
+            M6[store_performance]
+        end
+        subgraph M_RET[returns]
+            M7[return_analysis]
+        end
+    end
+
+    BI["⑧ Ad-hoc SQL / BI"]
+
+    SRC_SHOP --&gt; DLT_SHOP
+    SRC_SHIP --&gt; DLT_SHIP
+    SRC_LOOP -.-&gt; DLT_LOOP
+    SRC_SWYM -.-&gt; DLT_SWYM
+    SRC_KLAV -.-&gt; DLT_KLAV
+    SRC_SHOP &amp; SRC_SHIP &amp; SRC_LOOP &amp; SRC_SWYM &amp; SRC_KLAV --&gt; MOCKGEN
+
+    SCHED --&gt; CRJ
+    AR --&gt; CRJ
+    SM --&gt; CRJ
+    CRJ -.-&gt; DLT_SHOP
+    CRJ -.-&gt; DLT_SHIP
+
+    MOCKGEN --&gt; RAW_SHOP &amp; RAW_SHIP &amp; RAW_LOOP &amp; RAW_SWYM &amp; RAW_KLAV
+    DLT_SHOP -.-&gt; RAW_SHOP
+    DLT_SHIP -.-&gt; RAW_SHIP
+    DLT_LOOP -.-&gt; RAW_LOOP
+    DLT_SWYM -.-&gt; RAW_SWYM
+    DLT_KLAV -.-&gt; RAW_KLAV
+
+    RAW_SHOP --&gt; STG_SHOP
+    RAW_SHIP --&gt; STG_SHIP
+    RAW_LOOP --&gt; STG_LOOP
+    RAW_SWYM --&gt; STG_SWYM
+    RAW_KLAV --&gt; STG_KLAV
+
+    STG_SHOP --&gt; I1 &amp; I2 &amp; I3 &amp; I5
+    STG_LOOP --&gt; I4
+    STG_SWYM --&gt; I5
+
+    I1 --&gt; M2 &amp; M5 &amp; M6
+    I2 --&gt; M3 &amp; M4
+    I3 --&gt; M1
+    I4 --&gt; M7
+    I5 --&gt; M3
+
+    M1 &amp; M2 &amp; M3 &amp; M4 &amp; M5 &amp; M6 &amp; M7 --&gt; BI
+
+    click SHOP_ORD "https://mdonovan3.github.io/mashburn-analytics/data-sources/shopify/" "Shopify orders — id, customer_id, location_id, line_items (nested)"
+    click SHOP_CUST "https://mdonovan3.github.io/mashburn-analytics/data-sources/shopify/" "Shopify customers — id, email, orders_count, total_spent"
+    click SHOP_PROD "https://mdonovan3.github.io/mashburn-analytics/data-sources/shopify/" "Shopify products — id, title, product_type, vendor, tags"
+    click SHOP_VAR "https://mdonovan3.github.io/mashburn-analytics/data-sources/shopify/" "Shopify product_variants — id, product_id, sku, price, inventory_quantity"
+    click SHOP_INV "https://mdonovan3.github.io/mashburn-analytics/data-sources/shopify/" "Shopify inventory_levels — inventory_item_id, location_id, available"
+    click SHOP_LOC "https://mdonovan3.github.io/mashburn-analytics/data-sources/shopify/" "Shopify locations — the ~15 physical stores"
+    click SHIP_SHIP "https://mdonovan3.github.io/mashburn-analytics/data-sources/shiphero/" "ShipHero shipments — GraphQL, refresh-token auth, some mock fields unconfirmed against real API"
+    click LOOP_REQ "https://mdonovan3.github.io/mashburn-analytics/data-sources/loop-returns/" "Loop return_requests — state, type, refund/exchange/gift_card"
+    click LOOP_LI "https://mdonovan3.github.io/mashburn-analytics/data-sources/loop-returns/" "Loop return_line_items — reason, parent_reason, outcome"
+    click SWYM_WISH "https://mdonovan3.github.io/mashburn-analytics/data-sources/swym/" "Swym wishlist_events — empi/epi join keys back to Shopify, customer_email added after a mock-schema gap was found"
+    click SWYM_WAIT "https://mdonovan3.github.io/mashburn-analytics/data-sources/swym/" "Swym waitlist_signups — back-in-stock signups, signed_up_at/notified_at/purchased_at"
+    click KLAV_EVT "https://mdonovan3.github.io/mashburn-analytics/data-sources/klaviyo/" "Klaviyo email_events — sent/opened/clicked/bounced/unsubscribed"
+    click KLAV_CAMP "https://mdonovan3.github.io/mashburn-analytics/data-sources/klaviyo/" "Klaviyo campaigns — subject, status, open_rate, click_rate"
+    click MOCKGEN "https://mdonovan3.github.io/mashburn-analytics/architecture/ingestion/" "Real, working — generates all 5 sources' JSON and loads it into BigQuery today"
+    click DLT_SHOP "https://mdonovan3.github.io/mashburn-analytics/data-sources/shopify/" "Declarative rest_api_source — scaffolded, not yet run against a live store"
+    click DLT_SHIP "https://mdonovan3.github.io/mashburn-analytics/data-sources/shiphero/" "Hand-rolled GraphQL resource, 28-day refresh-token exchange"
+    click SCHED "https://mdonovan3.github.io/mashburn-analytics/architecture/orchestration-deployment/" "Cron trigger for each dlt Cloud Run Job — scaffolded, not deployed"
+    click CRJ "https://mdonovan3.github.io/mashburn-analytics/architecture/orchestration-deployment/" "One job per source, so one source's failure doesn't block the others"
+    click RAW_SHOP "https://mdonovan3.github.io/mashburn-analytics/services/bigquery/" "Untouched copy of the source API response — no renaming, no logic"
+    click STG_SHOP "https://mdonovan3.github.io/mashburn-analytics/data-modeling/staging/" "7 views — currently SELECT 1 AS stub, TODO comments spec the real rename/cast logic"
+    click STG_SHIP "https://mdonovan3.github.io/mashburn-analytics/data-modeling/staging/" "2 views, incl. UNNEST of nested shipping_labels"
+    click STG_LOOP "https://mdonovan3.github.io/mashburn-analytics/data-modeling/staging/" "2 views"
+    click STG_SWYM "https://mdonovan3.github.io/mashburn-analytics/data-modeling/staging/" "2 views — renames empi/epi/cts into product_id/variant_id/created_at"
+    click STG_KLAV "https://mdonovan3.github.io/mashburn-analytics/data-modeling/staging/" "2 views"
+    click I1 "https://mdonovan3.github.io/mashburn-analytics/data-modeling/intermediate/" "orders + customers + locations — one row per order with channel, city, location name"
+    click I2 "https://mdonovan3.github.io/mashburn-analytics/data-modeling/intermediate/" "order_line_items + products + product_variants — one row per line item"
+    click I3 "https://mdonovan3.github.io/mashburn-analytics/data-modeling/intermediate/" "orders aggregated by customer_id — lifetime_orders, lifetime_revenue"
+    click I4 "https://mdonovan3.github.io/mashburn-analytics/data-modeling/intermediate/" "return_requests + return_line_items + order_line_items — days_to_return, resolution type"
+    click I5 "https://mdonovan3.github.io/mashburn-analytics/data-modeling/intermediate/" "The one non-trivial model — time-ordered wishlist-add-before-purchase join"
+    click M1 "https://mdonovan3.github.io/mashburn-analytics/data-modeling/marts/" "Lifetime value, tier, acquisition channel — one row per customer"
+    click M2 "https://mdonovan3.github.io/mashburn-analytics/data-modeling/marts/" "Monthly cohorts, repeat purchase rate at 90/180/365 days"
+    click M3 "https://mdonovan3.github.io/mashburn-analytics/data-modeling/marts/" "Sell-through, wishlist conversion, in_ann_loves_lately flag — one row per product"
+    click M4 "https://mdonovan3.github.io/mashburn-analytics/data-modeling/marts/" "Return rate by SKU — is it a size/fit pattern?"
+    click M5 "https://mdonovan3.github.io/mashburn-analytics/data-modeling/marts/" "eCommerce vs. POS revenue split by month"
+    click M6 "https://mdonovan3.github.io/mashburn-analytics/data-modeling/marts/" "One row per store per month — which of ~15 stores punch above their weight"
+    click M7 "https://mdonovan3.github.io/mashburn-analytics/data-modeling/marts/" "Exchange vs. refund vs. credit mix, top reason, avg days to return"</code></pre>
+<p>Solid arrows are working today; dashed arrows are designed but not yet
+executed — same convention as the <a href="../../">Home</a> diagram.</p>
+<h2 id="zoom-in-the-full-dbt-dag-model-by-model">Zoom in: the full dbt DAG, model by model<a class="headerlink" href="#zoom-in-the-full-dbt-dag-model-by-model" title="Permanent link">&para;</a></h2>
+<p>The diagram above collapses staging into one box per source (<code>stg_shopify__*
+(7)</code>). This one expands every staging, intermediate, and mart model
+individually, with the real <code>ref()</code> edges described on the
+<a href="../../data-modeling/overview/">Data Modeling</a> pages — useful for seeing
+exactly which stub has to become real SQL before a given mart can run.</p>
+<pre class="mermaid"><code>flowchart LR
+    subgraph STAGING["Staging — 📋 stubbed"]
+        direction TB
+        s_orders[stg_shopify__orders]
+        s_cust[stg_shopify__customers]
+        s_loc[stg_shopify__locations]
+        s_li[stg_shopify__order_line_items]
+        s_prod[stg_shopify__products]
+        s_var[stg_shopify__product_variants]
+        s_inv[stg_shopify__inventory_levels]
+        s_ship[stg_shiphero__shipments]
+        s_label[stg_shiphero__shipping_labels]
+        s_ret[stg_loop__return_requests]
+        s_retli[stg_loop__return_line_items]
+        s_wish[stg_swym__wishlist_events]
+        s_wait[stg_swym__waitlist_signups]
+        s_email[stg_klaviyo__email_events]
+        s_camp[stg_klaviyo__campaigns]
+    end
+
+    subgraph INTERMEDIATE["Intermediate — 📋 stubbed, ephemeral"]
+        direction TB
+        i_orders[int_orders_enriched]
+        i_items[int_order_items_enriched]
+        i_hist[int_customer_order_history]
+        i_ret[int_return_metrics]
+        i_wish[int_wishlist_to_purchase]
+    end
+
+    subgraph MARTS["Marts — 📋 stubbed, physical tables"]
+        direction TB
+        m_ltv[customer_ltv]
+        m_cohort[customer_retention_cohorts]
+        m_prod[product_performance]
+        m_sku[return_rates_by_sku]
+        m_chan[channel_revenue_split]
+        m_store[store_performance]
+        m_return[return_analysis]
+    end
+
+    s_orders --&gt; i_orders
+    s_cust --&gt; i_orders
+    s_loc --&gt; i_orders
+
+    s_li --&gt; i_items
+    s_prod --&gt; i_items
+    s_var --&gt; i_items
+
+    s_orders --&gt; i_hist
+
+    s_ret --&gt; i_ret
+    s_retli --&gt; i_ret
+    s_li --&gt; i_ret
+
+    s_wish --&gt; i_wish
+    s_li --&gt; i_wish
+
+    i_orders --&gt; m_cohort
+    i_orders --&gt; m_chan
+    i_orders --&gt; m_store
+    i_items --&gt; m_prod
+    i_items --&gt; m_sku
+    i_hist --&gt; m_ltv
+    i_ret --&gt; m_return
+    i_wish --&gt; m_prod
+
+    click s_orders "https://mdonovan3.github.io/mashburn-analytics/data-modeling/staging/" "SELECT 1 AS stub today — TODO comment specs the rename/cast/channel-derive logic"
+    click i_wish "https://mdonovan3.github.io/mashburn-analytics/architecture/customer-identity/" "Depends on Swym's customer_email fix — see Customer Identity writeup"
+    click m_prod "https://mdonovan3.github.io/mashburn-analytics/data-modeling/marts/" "The one mart fed by two intermediate models — sales + wishlist conversion together"</code></pre>
+<p>Unresolved edges worth flagging while reading this diagram: <code>int_return_metrics</code>
+is documented as feeding only the <code>returns</code> mart, even though
+<code>return_rates_by_sku</code> (a <code>product</code> mart) logically needs return counts by SKU
+too — that gap is real in the current docs, not smoothed over here. See
+<a href="../../data-modeling/marts/">Marts</a> if picking this up.</p>
+<h2 id="more-detail-elsewhere-on-this-site">More detail elsewhere on this site<a class="headerlink" href="#more-detail-elsewhere-on-this-site" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Zoom into</th>
+<th>Page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mock ingestion path, running today</td>
+<td><a href="../ingestion/#mock-path">Ingestion Layer</a></td>
+</tr>
+<tr>
+<td>dlt pipeline internals (Shopify REST vs. ShipHero GraphQL)</td>
+<td><a href="../ingestion/">Ingestion Layer</a></td>
+</tr>
+<tr>
+<td>Cloud Scheduler / Cloud Run Jobs / container recipe</td>
+<td><a href="../orchestration-deployment/">Orchestration &amp; Deployment</a></td>
+</tr>
+<tr>
+<td>BigQuery partitioning, clustering, nested-field handling</td>
+<td><a href="../warehouse-modeling/">Warehouse &amp; Modeling</a></td>
+</tr>
+<tr>
+<td>Per-source tables, API shape, connector research</td>
+<td><a href="../../data-sources/shopify/">Shopify</a> · <a href="../../data-sources/shiphero/">ShipHero</a> · <a href="../../data-sources/loop-returns/">Loop Returns</a> · <a href="../../data-sources/swym/">Swym</a> · <a href="../../data-sources/klaviyo/">Klaviyo</a></td>
+</tr>
+<tr>
+<td>Staging/intermediate/marts model specs</td>
+<td><a href="../../data-modeling/staging/">Staging</a> · <a href="../../data-modeling/intermediate/">Intermediate</a> · <a href="../../data-modeling/marts/">Marts</a></td>
+</tr>
+<tr>
+<td>Cross-source customer join (Swym/Klaviyo email → Shopify)</td>
+<td><a href="../customer-identity/">Customer Identity &amp; Conversion Tracking</a></td>
+</tr>
+<tr>
+<td>Why dlt over Fivetran/Airbyte/Portable/Hevo</td>
+<td><a href="../managed-vs-self-hosted/">Managed vs. Self-Hosted</a></td>
+</tr>
+<tr>
+<td>What's real vs. stubbed, in one table</td>
+<td><a href="../../status/">Status &amp; Roadmap</a></td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -1586,7 +1982,7 @@ command), no Scheduler job actually created yet.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../cloud-run-jobs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cloud Run Jobs">
+          <a href="../overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1596,20 +1992,20 @@ command), no Scheduler job actually created yet.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Cloud Run Jobs
+                Overview
               </div>
             </div>
           </a>
         
         
           
-          <a href="../secret-manager/" class="md-footer__link md-footer__link--next" aria-label="Next: Secret Manager">
+          <a href="../ingestion/" class="md-footer__link md-footer__link--next" aria-label="Next: Ingestion Layer">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Secret Manager
+                Ingestion Layer
               </div>
             </div>
             <div class="md-footer__button md-icon">
