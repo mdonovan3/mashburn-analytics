@@ -12,6 +12,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1001_0",
       "bt": "shopmashburn.com",
+      "customer_email": "james.whitfield@gmail.com",
       "cts": 1777644000000,
       "uts": 1777644001000,
       "_t": "a"
@@ -28,6 +29,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1003_1",
       "bt": "shopmashburn.com",
+      "customer_email": "michael.torrence@gmail.com",
       "cts": 1777647600000,
       "uts": 1777647601000,
       "_t": "a"
@@ -44,6 +46,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1008_2",
       "bt": "shopmashburn.com",
+      "customer_email": "elizabeth.moore@gmail.com",
       "cts": 1777737600000,
       "uts": 1777737601000,
       "_t": "a"
@@ -60,6 +63,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1007_0",
       "bt": "shopmashburn.com",
+      "customer_email": "david.park@gmail.com",
       "cts": 1777741200000,
       "uts": 1777741201000,
       "_t": "a"
@@ -76,6 +80,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1013_1",
       "bt": "shopmashburn.com",
+      "customer_email": "charles.ingram@gmail.com",
       "cts": 1777831200000,
       "uts": 1777831201000,
       "_t": "a"
@@ -92,6 +97,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1004_2",
       "bt": "shopmashburn.com",
+      "customer_email": "caroline.hayes@gmail.com",
       "cts": 1777834800000,
       "uts": 1777834801000,
       "_t": "a"
@@ -108,6 +114,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1015_0",
       "bt": "shopmashburn.com",
+      "customer_email": "henry.shaw@gmail.com",
       "cts": 1777924800000,
       "uts": 1777924801000,
       "_t": "a"
@@ -124,6 +131,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1010_1",
       "bt": "shopmashburn.com",
+      "customer_email": "patricia.wu@gmail.com",
       "cts": 1777928400000,
       "uts": 1777928401000,
       "_t": "a"
@@ -140,6 +148,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1012_2",
       "bt": "shopmashburn.com",
+      "customer_email": "jennifer.cross@gmail.com",
       "cts": 1777989600000,
       "uts": 1777989601000,
       "_t": "a"
@@ -156,6 +165,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1018_0",
       "bt": "shopmashburn.com",
+      "customer_email": "helen.price@gmail.com",
       "cts": 1777993200000,
       "uts": 1777993201000,
       "_t": "a"
@@ -172,6 +182,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1001_1",
       "bt": "shopmashburn.com",
+      "customer_email": "james.whitfield@gmail.com",
       "cts": 1778083200000,
       "uts": 1778083201000,
       "_t": "a"
@@ -188,6 +199,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1008_2",
       "bt": "shopmashburn.com",
+      "customer_email": "elizabeth.moore@gmail.com",
       "cts": 1778173200000,
       "uts": 1778173201000,
       "_t": "a"
@@ -204,6 +216,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1003_0",
       "bt": "shopmashburn.com",
+      "customer_email": "michael.torrence@gmail.com",
       "cts": 1778263200000,
       "uts": 1778263201000,
       "_t": "a"
@@ -220,6 +233,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1013_1",
       "bt": "shopmashburn.com",
+      "customer_email": "charles.ingram@gmail.com",
       "cts": 1778266800000,
       "uts": 1778266801000,
       "_t": "a"
@@ -236,6 +250,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1015_2",
       "bt": "shopmashburn.com",
+      "customer_email": "henry.shaw@gmail.com",
       "cts": 1778356800000,
       "uts": 1778356801000,
       "_t": "a"
@@ -252,6 +267,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1007_0",
       "bt": "shopmashburn.com",
+      "customer_email": "david.park@gmail.com",
       "cts": 1778446800000,
       "uts": 1778446801000,
       "_t": "a"
@@ -268,6 +284,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1001_1",
       "bt": "shopmashburn.com",
+      "customer_email": "james.whitfield@gmail.com",
       "cts": 1778508000000,
       "uts": 1778508001000,
       "_t": "r"
@@ -284,6 +301,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1010_2",
       "bt": "shopmashburn.com",
+      "customer_email": "patricia.wu@gmail.com",
       "cts": 1778511600000,
       "uts": 1778511601000,
       "_t": "a"
@@ -300,6 +318,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1012_0",
       "bt": "shopmashburn.com",
+      "customer_email": "jennifer.cross@gmail.com",
       "cts": 1778601600000,
       "uts": 1778601601000,
       "_t": "a"
@@ -316,6 +335,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1018_1",
       "bt": "shopmashburn.com",
+      "customer_email": "helen.price@gmail.com",
       "cts": 1778605200000,
       "uts": 1778605201000,
       "_t": "a"
@@ -332,6 +352,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1004_2",
       "bt": "shopmashburn.com",
+      "customer_email": "caroline.hayes@gmail.com",
       "cts": 1778695200000,
       "uts": 1778695201000,
       "_t": "a"
@@ -348,6 +369,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1003_0",
       "bt": "shopmashburn.com",
+      "customer_email": "michael.torrence@gmail.com",
       "cts": 1778785200000,
       "uts": 1778785201000,
       "_t": "a"
@@ -364,6 +386,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1003_1",
       "bt": "shopmashburn.com",
+      "customer_email": "michael.torrence@gmail.com",
       "cts": 1778788800000,
       "uts": 1778788801000,
       "_t": "r"
@@ -380,6 +403,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1008_2",
       "bt": "shopmashburn.com",
+      "customer_email": "elizabeth.moore@gmail.com",
       "cts": 1778878800000,
       "uts": 1778878801000,
       "_t": "r"
@@ -396,6 +420,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1008_0",
       "bt": "shopmashburn.com",
+      "customer_email": "elizabeth.moore@gmail.com",
       "cts": 1779804000000,
       "uts": 1779804001000,
       "_t": "r"
@@ -412,6 +437,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1007_1",
       "bt": "shopmashburn.com",
+      "customer_email": "david.park@gmail.com",
       "cts": 1778943600000,
       "uts": 1778943601000,
       "_t": "r"
@@ -428,6 +454,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1013_2",
       "bt": "shopmashburn.com",
+      "customer_email": "charles.ingram@gmail.com",
       "cts": 1779033600000,
       "uts": 1779033601000,
       "_t": "a"
@@ -444,6 +471,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1015_0",
       "bt": "shopmashburn.com",
+      "customer_email": "henry.shaw@gmail.com",
       "cts": 1779123600000,
       "uts": 1779123601000,
       "_t": "a"
@@ -460,6 +488,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1010_1",
       "bt": "shopmashburn.com",
+      "customer_email": "patricia.wu@gmail.com",
       "cts": 1779213600000,
       "uts": 1779213601000,
       "_t": "a"
@@ -476,6 +505,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1012_2",
       "bt": "shopmashburn.com",
+      "customer_email": "jennifer.cross@gmail.com",
       "cts": 1779476400000,
       "uts": 1779476401000,
       "_t": "r"
@@ -492,6 +522,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1012_0",
       "bt": "shopmashburn.com",
+      "customer_email": "jennifer.cross@gmail.com",
       "cts": 1779480000000,
       "uts": 1779480001000,
       "_t": "r"
@@ -508,6 +539,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1001_1",
       "bt": "shopmashburn.com",
+      "customer_email": "james.whitfield@gmail.com",
       "cts": 1779656400000,
       "uts": 1779656401000,
       "_t": "a"
@@ -524,6 +556,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1018_2",
       "bt": "shopmashburn.com",
+      "customer_email": "helen.price@gmail.com",
       "cts": 1779717600000,
       "uts": 1779717601000,
       "_t": "r"
@@ -540,6 +573,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1004_0",
       "bt": "shopmashburn.com",
+      "customer_email": "caroline.hayes@gmail.com",
       "cts": 1779721200000,
       "uts": 1779721201000,
       "_t": "r"
@@ -556,6 +590,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1015_1",
       "bt": "shopmashburn.com",
+      "customer_email": "henry.shaw@gmail.com",
       "cts": 1779897600000,
       "uts": 1779897601000,
       "_t": "r"
@@ -572,6 +607,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1013_2",
       "bt": "shopmashburn.com",
+      "customer_email": "charles.ingram@gmail.com",
       "cts": 1779987600000,
       "uts": 1779987601000,
       "_t": "a"
@@ -588,6 +624,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1018_0",
       "bt": "shopmashburn.com",
+      "customer_email": "helen.price@gmail.com",
       "cts": 1779991200000,
       "uts": 1779991201000,
       "_t": "a"
@@ -604,6 +641,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1010_1",
       "bt": "shopmashburn.com",
+      "customer_email": "patricia.wu@gmail.com",
       "cts": 1780081200000,
       "uts": 1780081201000,
       "_t": "a"
@@ -620,6 +658,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1001_2",
       "bt": "shopmashburn.com",
+      "customer_email": "james.whitfield@gmail.com",
       "cts": 1780084800000,
       "uts": 1780084801000,
       "_t": "r"
@@ -636,6 +675,7 @@
       "lid": "lst_default_wishlist",
       "di": "device_1007_0",
       "bt": "shopmashburn.com",
+      "customer_email": "david.park@gmail.com",
       "cts": 1780174800000,
       "uts": 1780174801000,
       "_t": "r"

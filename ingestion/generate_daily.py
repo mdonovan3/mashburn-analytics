@@ -277,6 +277,7 @@ def generate_wishlist_events(date: datetime, batch_num: int, count: int = 5) -> 
             "lid": f"list_{customer['id']}",
             "di": f"device_{random.randint(1000, 9999)}",
             "bt": "web",
+            "customer_email": customer["email"],
             "cts": cts,
             "uts": cts,
         })

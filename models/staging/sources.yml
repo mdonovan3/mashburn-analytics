@@ -141,6 +141,8 @@ sources:
             description: "Device identifier"
           - name: bt
             description: "Brand/source attribution"
+          - name: customer_email
+            description: "From the real webhook's User object (Medium: \"email\", MediumValue: <email>) — flattened here. Added after an initial version of this schema omitted it; see docs/architecture/customer-identity.md"
           - name: cts
             description: "Created timestamp (milliseconds)"
           - name: uts

@@ -302,6 +302,7 @@ def build_wishlist_events():
     for i, (cid, vid, date, action) in enumerate(WISHLIST_SPECS):
         v = var_by_id[vid]
         prod = prod_by_id[v["product_id"]]
+        cust = cust_by_id[cid]
         slug = prod["title"].lower().replace(" ", "-").replace("'", "")
         cts = _swym_ts(date, offset_hours=i % 8)
         events.append({
@@ -316,6 +317,7 @@ def build_wishlist_events():
             "lid": SWYM_LIST_ID,
             "di": f"device_{cid}_{i % 3}",
             "bt": "shopmashburn.com",
+            "customer_email": cust["email"],
             "cts": cts,
             "uts": cts + 1000,
             "_t": action,

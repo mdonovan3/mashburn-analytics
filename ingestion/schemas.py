@@ -144,6 +144,12 @@ SWYM_WISHLIST_EVENTS = [
     SchemaField("lid", "STRING"),        # list id
     SchemaField("di", "STRING"),         # device identifier
     SchemaField("bt", "STRING"),         # brand/source
+    # Real Swym webhooks include a User object (UserId, Medium: "email",
+    # MediumValue: <email>) on every event — flattened to customer_email
+    # here for consistency with SWYM_WAITLIST_SIGNUPS and the rest of this
+    # file. Originally missing from this mock schema; see
+    # docs/architecture/customer-identity.md for how that was caught.
+    SchemaField("customer_email", "STRING"),
     SchemaField("cts", "INTEGER"),       # created timestamp millis
     SchemaField("uts", "INTEGER"),       # updated timestamp millis
     SchemaField("_t", "STRING"),         # action type (e.g. "a" = add)

@@ -48,7 +48,7 @@ the status legend (:white_check_mark: Implemented / :jigsaw: Scaffolded /
 | Klaviyo actually in use, confirmed | :clipboard: Not done |
 | Company sizing (store count, catalog size, revenue-derived order volume) | :white_check_mark: Done, from public sources — see [Managed vs. Self-Hosted](architecture/managed-vs-self-hosted.md#estimated-data-volumes) |
 | Customer identity resolution across sources checked against real API docs | :white_check_mark: Done — see [Customer Identity & Conversion Tracking](architecture/customer-identity.md) |
-| `SWYM_WISHLIST_EVENTS` mock schema missing email field | :clipboard: Fix identified, not applied — same page |
+| `SWYM_WISHLIST_EVENTS` mock schema missing email field | :white_check_mark: Fixed — `customer_email` added to `schemas.py`, both mock generators, and `sources.yml` |
 | `int_customer_identity` dbt model | :clipboard: Planned — same page |
 
 ## Documentation
