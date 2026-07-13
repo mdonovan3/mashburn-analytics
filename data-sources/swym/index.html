@@ -436,6 +436,8 @@
       
         
       
+        
+      
     
     
     
@@ -608,6 +610,34 @@
     
   
     Managed vs. Self-Hosted
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/customer-identity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customer Identity & Conversion Tracking
   
 
     
@@ -882,6 +912,17 @@
     <span class="md-ellipsis">
       
         Tables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mock-schema-gap-missing-email-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mock schema gap — missing email field
       
     </span>
   </a>
@@ -1520,6 +1561,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mock-schema-gap-missing-email-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mock schema gap — missing email field
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#why-this-is-the-hardest-source-to-bring-in-house" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1615,6 +1667,15 @@ in <code>sources.yml</code>; renaming happens in <a href="../../data-modeling/st
 what makes the "wishlist-to-purchase conversion" and "back-in-stock
 performance" business questions answerable at all (see
 <a href="../../data-modeling/intermediate/"><code>int_wishlist_to_purchase</code></a>).</p>
+<h2 id="mock-schema-gap-missing-email-field"><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> Mock schema gap — missing email field<a class="headerlink" href="#mock-schema-gap-missing-email-field" title="Permanent link">&para;</a></h2>
+<p><code>wishlist_events</code> as mocked here has no customer identifier at all (only
+<code>di</code>, a device id) — but Swym's real webhooks
+(<a href="https://developers.getswym.com/docs/wishlist-add">confirmed via their developer docs</a>)
+include a <code>User</code> object with <code>Medium: "email"</code> / <code>MediumValue</code> (the actual
+email address) on every event. The mock schema undersold what the real API
+provides. Before building the real dlt source, add an email field here too
+— see <a href="../../architecture/customer-identity/">Customer Identity &amp; Conversion Tracking</a>
+for the full writeup.</p>
 <h2 id="why-this-is-the-hardest-source-to-bring-in-house">Why this is the hardest source to bring in-house<a class="headerlink" href="#why-this-is-the-hardest-source-to-bring-in-house" title="Permanent link">&para;</a></h2>
 <p>Swym has no connector on any evaluated managed platform — confirmed via
 direct search, not just absence from one vendor. Whatever ingestion

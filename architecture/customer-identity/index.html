@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../bigquery/">
+        <link rel="prev" href="../managed-vs-self-hosted/">
       
       
-        <link rel="next" href="../cloud-scheduler/">
+        <link rel="next" href="../../data-sources/overview/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Cloud Run Jobs - Mashburn Analytics — Ecosystem Docs</title>
+        <title>Customer Identity & Conversion Tracking - Mashburn Analytics — Ecosystem Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cloud-run-jobs" class="md-skip">
+        <a href="#customer-identity-conversion-tracking" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cloud Run Jobs
+              Customer Identity & Conversion Tracking
             
           </span>
         </div>
@@ -240,11 +240,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../architecture/overview/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
           
   
   
@@ -306,13 +308,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../overview/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../services/overview/" class="md-tabs__link">
           
   
   
@@ -421,8 +421,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -442,19 +444,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -472,7 +477,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -490,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
@@ -518,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/ingestion/" class="md-nav__link">
+      <a href="../ingestion/" class="md-nav__link">
         
   
   
@@ -546,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/orchestration-deployment/" class="md-nav__link">
+      <a href="../orchestration-deployment/" class="md-nav__link">
         
   
   
@@ -574,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/warehouse-modeling/" class="md-nav__link">
+      <a href="../warehouse-modeling/" class="md-nav__link">
         
   
   
@@ -602,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/managed-vs-self-hosted/" class="md-nav__link">
+      <a href="../managed-vs-self-hosted/" class="md-nav__link">
         
   
   
@@ -627,10 +632,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../architecture/customer-identity/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customer Identity & Conversion Tracking
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -646,6 +678,114 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#shopify-is-the-identity-anchor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shopify is the identity anchor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-source-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per-source findings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-one-real-gap-swym-wishlist_events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The one real gap: Swym wishlist_events
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-a-genuine-decision-not-a-data-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's a genuine decision, not a data problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended implementation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deliberately-not-pursuing-a-dedicated-cdp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deliberately not pursuing: a dedicated CDP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#out-of-scope-worth-naming-on-site-browsing-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Out of scope, worth naming: on-site browsing activity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1084,10 +1224,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1113,22 +1251,19 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -1146,7 +1281,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1164,7 +1299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+      <a href="../../services/overview/" class="md-nav__link">
         
   
   
@@ -1192,7 +1327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dbt/" class="md-nav__link">
+      <a href="../../services/dbt/" class="md-nav__link">
         
   
   
@@ -1220,7 +1355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dlt/" class="md-nav__link">
+      <a href="../../services/dlt/" class="md-nav__link">
         
   
   
@@ -1248,7 +1383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bigquery/" class="md-nav__link">
+      <a href="../../services/bigquery/" class="md-nav__link">
         
   
   
@@ -1273,19 +1408,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../services/cloud-run-jobs/" class="md-nav__link">
         
   
   
@@ -1301,7 +1427,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1314,7 +1439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cloud-scheduler/" class="md-nav__link">
+      <a href="../../services/cloud-scheduler/" class="md-nav__link">
         
   
   
@@ -1342,7 +1467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../secret-manager/" class="md-nav__link">
+      <a href="../../services/secret-manager/" class="md-nav__link">
         
   
   
@@ -1370,7 +1495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../artifact-registry/" class="md-nav__link">
+      <a href="../../services/artifact-registry/" class="md-nav__link">
         
   
   
@@ -1398,7 +1523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../evaluated-not-chosen/" class="md-nav__link">
+      <a href="../../services/evaluated-not-chosen/" class="md-nav__link">
         
   
   
@@ -1473,6 +1598,102 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#shopify-is-the-identity-anchor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shopify is the identity anchor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-source-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per-source findings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-one-real-gap-swym-wishlist_events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The one real gap: Swym wishlist_events
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-a-genuine-decision-not-a-data-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's a genuine decision, not a data problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended implementation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deliberately-not-pursuing-a-dedicated-cdp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deliberately not pursuing: a dedicated CDP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#out-of-scope-worth-naming-on-site-browsing-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Out of scope, worth naming: on-site browsing activity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1488,7 +1709,7 @@
 
 
   
-    <a href="https://github.com/mdonovan3/mashburn-analytics/edit/main/docs/services/cloud-run-jobs.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/mdonovan3/mashburn-analytics/edit/main/docs/architecture/customer-identity.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1496,32 +1717,123 @@
   
 
 
-<h1 id="cloud-run-jobs">Cloud Run Jobs<a class="headerlink" href="#cloud-run-jobs" title="Permanent link">&para;</a></h1>
-<p><strong>What it is:</strong> the batch-execution sibling of Cloud Run's more familiar
-Service type. A Job runs a container <strong>to completion</strong> — no server, no
-listening port, no idle instance kept warm. You're billed only for the
-seconds the container actually runs.</p>
-<p><strong>Execution model:</strong> each trigger (manual, <code>gcloud run jobs execute</code>, or a
-Cloud Scheduler call) starts a new <strong>Execution</strong>, which spins up one or
-more <strong>Tasks</strong> (independent container instances). The container is pulled
-fresh from <a href="../artifact-registry/">Artifact Registry</a>, runs your <code>CMD</code>
-start-to-finish, and its exit code decides the outcome: <code>0</code> = success,
-non-zero = failure (retried up to <code>--max-retries</code> times). Either way the
-container is destroyed afterward.</p>
-<p><strong>Why this over Cloud Run Services or a VM</strong> for this project's ingestion
-containers: nothing here needs to be "always on" — it's 4-5 independent
-scheduled pulls, a few minutes each, a handful of times a day. A Service
-would sit idle (and potentially billed) between runs; a VM needs patching
-and babysitting. A Job is the shape that matches the actual workload.</p>
-<p><strong>Language support:</strong> any Linux container — Google publishes official base
-images for Go/Java/Node/PHP/Python/Ruby/.NET, but since the only contract
-is "exit 0 on success," anything works, including R via a custom <code>rocker</code>
-image. This project stays Python since <a href="../dlt/">dlt</a> is Python-only.</p>
-<p><strong>Used for, in this project:</strong> one Job per ingestion source (<code>shopify-dlt</code>,
-<code>shiphero-dlt</code>, ...), and proposed for the dbt run step too — see
-<a href="../../architecture/managed-vs-self-hosted/">Managed vs. Self-Hosted</a>.</p>
-<p><strong>Status:</strong> <img alt="🧩" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f9e9.svg" title=":jigsaw:" /> designed (<code>ingestion/dlt/*/Dockerfile</code>,
-<code>ingestion/dlt/DEPLOY.md</code>), no Job actually deployed yet.</p>
+<h1 id="customer-identity-conversion-tracking">Customer Identity &amp; Conversion Tracking<a class="headerlink" href="#customer-identity-conversion-tracking" title="Permanent link">&para;</a></h1>
+<p>Cross-cutting question that touches <a href="../../data-sources/overview/">Data Sources</a>
+and <a href="../../data-modeling/overview/">Data Modeling</a> alike: <strong>can a customer
+be reliably identified across all 5 systems, well enough to answer "did
+this wishlist add / email click ever turn into a purchase?"</strong></p>
+<p>Short answer: yes, using data these platforms already provide — no new
+identity/CDP tool needed. Below is what was actually checked (not assumed)
+and what's still an open business-logic decision rather than a data gap.</p>
+<h2 id="shopify-is-the-identity-anchor">Shopify is the identity anchor<a class="headerlink" href="#shopify-is-the-identity-anchor" title="Permanent link">&para;</a></h2>
+<p><code>customers.email</code> and <code>orders.email</code> are both already modeled fields (see
+<code>ingestion/schemas.py</code>) — every other source's identity signal gets
+resolved back to a Shopify <code>customer.id</code> via one of these.</p>
+<h2 id="per-source-findings">Per-source findings<a class="headerlink" href="#per-source-findings" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Identity field(s)</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shopify</td>
+<td><code>customers.email</code>, <code>customers.id</code>, <code>orders.email</code></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" title=":white_check_mark:" /> Confirmed — the anchor everything else joins to</td>
+</tr>
+<tr>
+<td>Loop Returns</td>
+<td><code>customer_email</code> + <code>provider_order_id</code> (Shopify order id)</td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" title=":white_check_mark:" /> Present in the modeled schema</td>
+</tr>
+<tr>
+<td>Klaviyo</td>
+<td><code>customer_email</code> on <code>email_events</code></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" title=":white_check_mark:" /> <strong>Confirmed by design</strong> — Klaviyo's real <a href="https://developers.klaviyo.com/en/reference/events_api_overview">Events API</a> requires every event to carry a profile identifier (<code>id</code>/<code>email</code>/<code>phone_number</code>). Not just "the field happens to exist," it's structurally required</td>
+</tr>
+<tr>
+<td>Swym <code>waitlist_signups</code></td>
+<td><code>customer_email</code></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" title=":white_check_mark:" /> Present in the modeled schema</td>
+</tr>
+<tr>
+<td>Swym <code>wishlist_events</code></td>
+<td>—</td>
+<td><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> <strong>Gap found, then resolved</strong> — see below</td>
+</tr>
+<tr>
+<td>ShipHero <code>shipments</code></td>
+<td><code>order_id</code> only (no direct customer field)</td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" title=":white_check_mark:" /> Fine — resolves transitively through the Shopify order, no identity work needed at this layer</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-one-real-gap-swym-wishlist_events">The one real gap: Swym <code>wishlist_events</code><a class="headerlink" href="#the-one-real-gap-swym-wishlist_events" title="Permanent link">&para;</a></h2>
+<p>The mock schema this project modeled
+(<a href="https://github.com/mdonovan3/mashburn-analytics/blob/main/ingestion/schemas.py"><code>SWYM_WISHLIST_EVENTS</code></a>)
+has no email or customer_id field — only <code>di</code> (a device identifier). That
+looked like a real problem: <code>int_wishlist_to_purchase</code>'s own TODO comment
+calls for matching on "variant_id <strong>and customer email</strong>," a field that
+doesn't exist on this table as modeled.</p>
+<p><strong>Checked against Swym's actual developer docs</strong> — not assumed —
+<a href="https://developers.getswym.com/docs/wishlist-add">developers.getswym.com/docs/wishlist-add</a>:
+every real wishlist webhook (<code>AddToWishlist</code>, <code>RemoveWishlist</code>,
+<code>ShareWishlist</code>, <code>AuthEmail</code>, etc.) includes a <code>User</code> object with <code>UserId</code>,
+<code>Medium</code> (set to <code>"email"</code>), and <code>MediumValue</code> (the actual email address).</p>
+<p><strong>Conclusion: the real API has what's needed. The mock schema was just
+incomplete.</strong> Fix is mechanical — add an email field to
+<code>SWYM_WISHLIST_EVENTS</code> in <code>ingestion/schemas.py</code> (and to the real dlt
+source once that's built) — not a design problem. Not yet applied to the
+mock schema; tracked in <a href="../../status/">Status &amp; Roadmap</a>.</p>
+<h2 id="whats-a-genuine-decision-not-a-data-problem">What's a genuine decision, not a data problem<a class="headerlink" href="#whats-a-genuine-decision-not-a-data-problem" title="Permanent link">&para;</a></h2>
+<p>A clean join doesn't automatically mean correct <em>attribution</em>. Specifically
+for Klaviyo email-to-purchase conversion tracking (not yet a scaffolded
+model):</p>
+<ul>
+<li>A guest-checkout order can use a different email than the one Klaviyo
+  has on file for that shopper — silently undercounts conversions.</li>
+<li>Shared/family emails can overcount.</li>
+<li>"Conversion" itself needs an explicit definition: a time window (e.g.
+  order within 7 days of a click) and a single-touch vs. multi-touch rule,
+  chosen deliberately and documented in the mart's <code>schema.yml</code> — not left
+  implicit in a <code>JOIN</code>. Last-touch, within a short window, is the simplest
+  defensible starting definition.</li>
+</ul>
+<h2 id="recommended-implementation">Recommended implementation<a class="headerlink" href="#recommended-implementation" title="Permanent link">&para;</a></h2>
+<p>A canonical identity-resolution model in dbt — e.g. <code>int_customer_identity</code>
+— anchored on Shopify <code>customer.id</code>, resolving <code>email</code> (and <code>device_id</code>
+where relevant) from every other source back to one row per customer. A
+<code>LEFT JOIN</code> + <code>COALESCE</code> pattern, not a new model architecture. This
+belongs in the <a href="../../data-modeling/intermediate/">intermediate</a> layer —
+either folded into <code>int_wishlist_to_purchase</code> or split out so other marts
+(Klaviyo conversion, once built) can reuse it instead of re-deriving the
+same joins.</p>
+<h2 id="deliberately-not-pursuing-a-dedicated-cdp">Deliberately not pursuing: a dedicated CDP<a class="headerlink" href="#deliberately-not-pursuing-a-dedicated-cdp" title="Permanent link">&para;</a></h2>
+<p>Tools like Segment or mParticle solve a different problem — real-time
+cross-channel identity activation at large scale. That's inconsistent with
+the self-hosted, minimal-new-vendor approach argued for throughout this
+project (see <a href="../managed-vs-self-hosted/">Managed vs. Self-Hosted</a>) and
+isn't needed here — plain <code>email</code> joins in dbt cover what's actually
+required.</p>
+<h2 id="out-of-scope-worth-naming-on-site-browsing-activity">Out of scope, worth naming: on-site browsing activity<a class="headerlink" href="#out-of-scope-worth-naming-on-site-browsing-activity" title="Permanent link">&para;</a></h2>
+<p>Product page views, cart adds, and checkout starts short of a completed
+order are a <em>different</em> thing from the wishlist/email/purchase events
+covered above, and <strong>none of this project's 5 modeled sources capture
+them</strong>. Shopify exposes this via its Web Pixels API / Customer Events,
+which would need its own evaluation (ingestion approach, data volume,
+whether Mashburn already has GA4 or similar covering this) before it's
+part of the identity picture — not assumed to already be covered by
+anything discussed on this page.</p>
+<h2 id="status">Status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h2>
+<p><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" title=":white_check_mark:" /> Research done — identity resolution across all 5
+sources is confirmed feasible with data these platforms already provide.
+<img alt="📋" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4cb.svg" title=":clipboard:" /> Not yet built — the <code>SWYM_WISHLIST_EVENTS</code> mock-schema fix,
+the <code>int_customer_identity</code> model, and the Klaviyo conversion mart (with
+its attribution rule) are all still open work. Tracked in
+<a href="../../status/">Status &amp; Roadmap</a>.</p>
 
 
 
@@ -1557,7 +1869,7 @@ image. This project stays Python since <a href="../dlt/">dlt</a> is Python-only.
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../bigquery/" class="md-footer__link md-footer__link--prev" aria-label="Previous: BigQuery">
+          <a href="../managed-vs-self-hosted/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Managed vs. Self-Hosted">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1567,20 +1879,20 @@ image. This project stays Python since <a href="../dlt/">dlt</a> is Python-only.
                 Previous
               </span>
               <div class="md-ellipsis">
-                BigQuery
+                Managed vs. Self-Hosted
               </div>
             </div>
           </a>
         
         
           
-          <a href="../cloud-scheduler/" class="md-footer__link md-footer__link--next" aria-label="Next: Cloud Scheduler">
+          <a href="../../data-sources/overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Cloud Scheduler
+                Overview
               </div>
             </div>
             <div class="md-footer__button md-icon">

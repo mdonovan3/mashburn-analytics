@@ -14,7 +14,7 @@
         <link rel="prev" href="../warehouse-modeling/">
       
       
-        <link rel="next" href="../../data-sources/overview/">
+        <link rel="next" href="../customer-identity/">
       
       
         
@@ -438,6 +438,8 @@
       
         
       
+        
+      
     
     
     
@@ -676,6 +678,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#estimated-data-volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estimated data volumes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ingestion-managed-platform-vs-self-hosted-dlt" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -683,6 +696,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Ingestion: managed platform vs. self-hosted (dlt)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-volume-range-justifies-each-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What volume range justifies each option
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -723,6 +753,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customer-identity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customer Identity & Conversion Tracking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1553,6 +1611,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#estimated-data-volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estimated data volumes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ingestion-managed-platform-vs-self-hosted-dlt" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1560,6 +1629,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Ingestion: managed platform vs. self-hosted (dlt)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-volume-range-justifies-each-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What volume range justifies each option
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1650,6 +1736,141 @@ operational simplicity for a small team matter more than raw throughput
 ceiling.</strong> That biases this whole page toward self-hosted options, and
 that bias is stated up front rather than hidden in the "recommendation"
 section.</p>
+<h2 id="estimated-data-volumes">Estimated data volumes<a class="headerlink" href="#estimated-data-volumes" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Illustrative planning model, not real numbers</p>
+<p>Mashburn hasn't shared actual order/traffic data with this project.
+The order-volume estimate below is grounded in two public data points —
+third-party revenue estimates and actual observed price points from
+shopmashburn.com — rather than a pure guess, but it's still a
+back-of-envelope model, not a confirmed number. Stated explicitly so
+it's easy to throw out and replace with real numbers on day one. Treat
+the "why it matters" conclusions as more durable than the specific row
+counts.</p>
+</div>
+<p><strong>Order volume, derived from revenue ÷ average order value:</strong></p>
+<ul>
+<li><strong>Revenue:</strong> third-party estimates (Growjo, RocketReach — algorithmic
+  estimates for a private company, not filed financials) put combined
+  Sid + Ann Mashburn revenue at <strong>$28M–$44M/year</strong>.</li>
+<li><strong>Average order value (AOV):</strong> built from actual prices pulled off the
+  site — silk ties $155, dress socks $15, ready-to-wear sport coats
+  $950–$1,695, made-to-measure suits from $2,295. A single-item accessory
+  order sits well under $200; a jacket or suit order alone clears
+  $1,000+. Blended across a catalog with that spread (and skewed toward
+  the more frequently-bought lower end — shirts, ties, accessories —
+  rather than suits), <strong>$250–$400</strong> is a reasonable estimated AOV for a
+  specialty menswear/womenswear retailer at this price tier.</li>
+<li><strong>Orders/year = revenue ÷ AOV:</strong> $28M / $400 ≈ <strong>70,000</strong> at the low end,
+  $44M / $250 ≈ <strong>175,000</strong> at the high end → <strong>~192–480 orders/day</strong>,
+  call it <strong>~300/day mid-case</strong>.</li>
+</ul>
+<p>This mid-case (~300 orders/day) happens to land close to an independent
+foot-traffic-based guess (~15 stores × modest daily transactions +
+e-commerce) made earlier in this project's research — two different
+methods landing in the same neighborhood is a reasonable sanity check,
+though both ultimately rest on third-party/estimated inputs rather than
+confirmed figures.</p>
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th>Source</th>
+<th>Est. rows/day (mid-case)</th>
+<th>Est. rows/month</th>
+<th>Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>orders</code></td>
+<td>Shopify</td>
+<td>~300</td>
+<td>~9K</td>
+<td>revenue ÷ AOV, derived above</td>
+</tr>
+<tr>
+<td><code>order_line_items</code></td>
+<td>Shopify</td>
+<td>~750</td>
+<td>~22K</td>
+<td>~2.5 items/order</td>
+</tr>
+<tr>
+<td><code>customers</code> (new+updated)</td>
+<td>Shopify</td>
+<td>~150</td>
+<td>~4.5K</td>
+<td>new signups + profile/order-count updates</td>
+</tr>
+<tr>
+<td><code>products</code> / <code>product_variants</code> (changed)</td>
+<td>Shopify</td>
+<td>~50 / ~150</td>
+<td>~1.5K / ~4.5K</td>
+<td>catalog is ~2K products confirmed via sitemap; low daily churn</td>
+</tr>
+<tr>
+<td><code>inventory_levels</code> (changed)</td>
+<td>Shopify</td>
+<td>~1,000–2,000</td>
+<td>~35K</td>
+<td>variants × ~16 locations is a large cross-product; every sale/restock touches a row — likely the largest Shopify contributor</td>
+</tr>
+<tr>
+<td><code>shipments</code> / <code>shipping_labels</code></td>
+<td>ShipHero</td>
+<td>~300 each</td>
+<td>~9K each</td>
+<td>~1 per order</td>
+</tr>
+<tr>
+<td><code>return_requests</code> / <code>return_line_items</code></td>
+<td>Loop</td>
+<td>~50–75 / ~90</td>
+<td>~2K / ~2.5K</td>
+<td>apparel return rates typically run 15–25%</td>
+</tr>
+<tr>
+<td><code>wishlist_events</code></td>
+<td>Swym</td>
+<td>~600–1,200</td>
+<td>~27K</td>
+<td>wishlist adds outpace purchases (higher-funnel action)</td>
+</tr>
+<tr>
+<td><code>waitlist_signups</code></td>
+<td>Swym</td>
+<td>~30</td>
+<td>~1K</td>
+<td>back-in-stock signups, smaller subset</td>
+</tr>
+<tr>
+<td><code>email_events</code></td>
+<td>Klaviyo</td>
+<td>~5,000–20,000</td>
+<td><strong>~350K</strong></td>
+<td>sends+opens+clicks across a subscriber list — reliably the largest volume source in any retail data stack, usually by 5–10x over the next-largest table</td>
+</tr>
+<tr>
+<td><code>campaigns</code></td>
+<td>Klaviyo</td>
+<td>&lt;5</td>
+<td>negligible</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rough total: ~0.3–0.6M rows/month across all 5 sources combined</strong>,
+overwhelmingly dominated by Klaviyo email events (~70-75% of the total).
+Everything else — the sources this project has actually scaffolded so far
+(Shopify, ShipHero) — is a small fraction of that.</p>
+<p><strong>Why this number matters:</strong> Fivetran's $500/million-MAR pricing with a
+$12,000/year minimum effectively pre-pays for <strong>2M rows/month</strong>. Even the
+high end of this estimate (~0.6M/month) is well under a third of what
+that floor already covers — a concrete version of the "the floor alone
+likely exceeds what's needed" claim made throughout this page, not just an
+assertion.</p>
 <h2 id="ingestion-managed-platform-vs-self-hosted-dlt">Ingestion: managed platform vs. self-hosted (dlt)<a class="headerlink" href="#ingestion-managed-platform-vs-self-hosted-dlt" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1706,6 +1927,48 @@ custom-build cost is fixed regardless of vendor choice. Given that, paying
 a platform fee on top buys relatively little at this data volume. dlt gets
 the same outcome (data in BigQuery, on schedule, incrementally) for
 infrastructure cost only.</p>
+<h3 id="what-volume-range-justifies-each-option">What volume range justifies each option<a class="headerlink" href="#what-volume-range-justifies-each-option" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Volume where it's actually justified</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>dlt + Cloud Run Jobs</strong></td>
+<td>No meaningful lower bound — works fine even smaller than this. Scales up to tens of millions of rows/month on a single container before you'd need to think about parallelization</td>
+<td>Compute-priced, not row-priced. The eventual ceiling is Cloud Run's per-task timeout (up to 7 days) and single-container throughput, not cost — a ceiling this project is nowhere near</td>
+</tr>
+<tr>
+<td><strong>Fivetran</strong></td>
+<td>Starts making economic sense once real usage approaches/exceeds ~2M rows/month (what the $12K/yr floor already covers), <em>or</em> regardless of volume once there's truly zero in-house engineering bandwidth for connector upkeep</td>
+<td>Mashburn's estimated ~0.3–0.6M rows/month is a fraction of the floor — paying mostly for coverage/reliability/support, not for capacity actually used</td>
+</tr>
+<tr>
+<td><strong>Airbyte Cloud</strong></td>
+<td>Cost-competitive against Fivetran roughly in the tens-of-millions-of-rows/month range, per the public contract-value comparison cited above</td>
+<td>Below that range, usage-based credits don't obviously beat self-hosted OSS or dlt on cost — the free lunch is at the high end, not the low end</td>
+</tr>
+<tr>
+<td><strong>Airbyte self-hosted OSS</strong></td>
+<td>Same "works at any volume" profile as dlt, since it's also compute-priced</td>
+<td>The real gap for this project isn't volume, it's the missing native ShipHero connector</td>
+</tr>
+<tr>
+<td><strong>Portable.io</strong></td>
+<td>Flat-rate pricing makes it specifically attractive at <strong>low volume with several niche connectors needed</strong> — exactly this project's shape</td>
+<td>Could look relatively worse at very high volume, where a per-row platform's marginal cost might undercut a flat fee — not a problem at Mashburn's scale</td>
+</tr>
+<tr>
+<td><strong>Hevo</strong></td>
+<td>Similar reasoning to Fivetran, but a lower cost floor (~$239–299/mo) — better fit than Fivetran at small scale, still pricier than self-hosted here</td>
+<td>Event-based tiers still mean paying for headroom this project's volume doesn't use</td>
+</tr>
+</tbody>
+</table>
 <h2 id="dbt-run-process-dbt-cloud-vs-self-hosted-dbt-core">dbt run process: dbt Cloud vs. self-hosted dbt Core<a class="headerlink" href="#dbt-run-process-dbt-cloud-vs-self-hosted-dbt-core" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1829,13 +2092,13 @@ built yet (only the ingestion containers exist so far, see
         
         
           
-          <a href="../../data-sources/overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
+          <a href="../customer-identity/" class="md-footer__link md-footer__link--next" aria-label="Next: Customer Identity &amp; Conversion Tracking">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Overview
+                Customer Identity & Conversion Tracking
               </div>
             </div>
             <div class="md-footer__button md-icon">
